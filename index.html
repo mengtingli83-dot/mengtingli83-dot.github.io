@@ -1,0 +1,1417 @@
+<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Mengting Li Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<meta name="description" content="Mengting Li: game artist working in 2D and 3D. Character design, illustration, texturing and game worlds.">
+<meta property="og:title" content="Mengting Li Portfolio">
+<meta property="og:description" content="Game artist working in 2D and 3D.">
+<meta property="og:image" content="assets/9ba808a0ec3cffaef41625284dcede9b.jpg">
+</head><body><style id="site-style">
+/* Layout: quiet dark gallery. Neutral frame so every project's own palette reads true: large name, text-left/image-right work rows, hover-preview list, two-column about, plain contact list. */
+:root{
+  --bg:#0a0a0a; --panel:#141414; --fg:#ededeb; --muted:#8a8a87; --faint:#5c5c5a; --line:#232322;
+  --hl:#ededeb; --danger:#ef6a5f; color-scheme:dark;
+  --sans:"Geist",system-ui,-apple-system,"Segoe UI","PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+  --mono:"Geist Mono",ui-monospace,Menlo,"PingFang SC","Noto Sans SC","Microsoft YaHei",monospace;
+  --w:1200px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6;font-weight:400;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+body.editing{padding-bottom:96px}
+::selection{background:var(--fg);color:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.02em;text-transform:uppercase}
+.muted{color:var(--muted)}
+.acc{color:var(--fg)}
+p{margin:0}
+.wrap{max-width:var(--w);margin:0 auto}
+main.wrap{overflow-x:clip}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+  margin-left:calc(-1 * max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)))}
+.nav .in{max-width:var(--w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px));flex-wrap:wrap}
+.nav .nm{font-weight:500;font-size:15px;text-decoration:none;letter-spacing:-.01em}
+.nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;color:var(--muted);transition:color .15s}
+.nav ul a:hover{color:var(--fg)}
+.dot{display:inline-flex;align-items:center;gap:8px;color:var(--muted)}
+.dot::before{content:"";width:6px;height:6px;border-radius:50%;background:#6fcf8e}
+@media (max-width:640px){.nav .dot{display:none}.nav ul{gap:16px}}
+
+/* hero */
+.hero{padding-block:clamp(64px,10vw,128px) clamp(56px,8vw,96px);display:grid;gap:36px;border-bottom:1px solid var(--line)}
+.hero-top{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted)}
+.big{font-weight:500;letter-spacing:-.045em;line-height:.92;margin:0;font-size:clamp(60px,11.5vw,156px);overflow-wrap:anywhere}
+.hero-bot{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:32px;align-items:end}
+.tag{font-size:clamp(20px,2.2vw,26px);line-height:1.35;color:var(--muted);max-width:34ch;font-weight:300;letter-spacing:-.01em}
+.roles{display:grid;gap:14px;justify-items:end;text-align:right;color:var(--muted)}
+.roles .r1{color:var(--fg)}
+@media (max-width:760px){.hero-bot{grid-template-columns:1fr}.roles{justify-items:start;text-align:left}}
+@media (prefers-reduced-motion:no-preference){.hero>*{animation:fade .8s cubic-bezier(.2,.7,.1,1) both}.hero>*:nth-child(2){animation-delay:.06s}.hero>*:nth-child(3){animation-delay:.14s}}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* section heads */
+section{padding-block:96px 0;scroll-margin-top:64px}
+#top{scroll-margin-top:80px}
+.sh{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:48px}
+.sh h2{font-weight:500;letter-spacing:-.03em;font-size:clamp(32px,4.4vw,52px);line-height:1;margin:0}
+.sh h2 em{font-style:normal;color:var(--faint)}
+.sh .cnt{color:var(--muted)}
+.filter{display:flex;gap:4px;border:1px solid var(--line);border-radius:999px;padding:3px;flex-wrap:wrap}
+.filter .fc{opacity:.55;margin-left:2px;font-variant-numeric:tabular-nums}
+@media (max-width:640px){.filter{border-radius:14px}}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font:400 13px var(--sans);color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.ctl.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.filter button{font-family:var(--mono);font-size:12px;text-transform:uppercase;border:0;background:none;color:var(--muted);padding:6px 14px;border-radius:999px;cursor:pointer}
+.filter button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+
+/* work rows */
+.works{display:grid;gap:clamp(56px,8vw,96px)}
+.w-row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,64px);align-items:center;border-top:1px solid var(--line);padding-top:clamp(24px,3vw,36px)}
+.w-row .frame{order:2}
+.w-txt{display:grid;gap:14px;align-content:center;min-width:0}
+.w-txt .file{display:flex;justify-content:space-between;gap:10px;color:var(--muted)}
+.w-txt h3{font-weight:500;letter-spacing:-.03em;font-size:clamp(32px,3.6vw,46px);line-height:1.02;margin:0;text-wrap:balance}
+.w-txt h3 a{text-decoration:none}
+.w-txt .sub{font-size:18px;line-height:1.45;color:var(--muted);max-width:36ch}
+.w-txt .facts{display:flex;gap:6px 16px;flex-wrap:wrap;color:var(--faint)}
+.go{display:inline-flex;align-items:center;gap:8px;text-decoration:none;width:max-content;font-size:15px;color:var(--fg);border-bottom:1px solid var(--line);padding-bottom:3px;transition:gap .2s,border-color .2s}
+.go:hover{gap:14px;border-color:var(--fg)}
+.frame{position:relative}
+.w-img{display:block;overflow:hidden;border-radius:4px}
+.w-img .shot{aspect-ratio:16/10;transition:transform .8s cubic-bezier(.2,.7,.1,1)}
+.w-img:hover .shot{transform:scale(1.025)}
+@media (max-width:820px){.w-row{grid-template-columns:1fr}.w-row .frame{order:0}}
+
+.shot{aspect-ratio:4/3;max-width:100%;position:relative;overflow:hidden;background:var(--panel)}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.ph{position:absolute;inset:0;display:grid;place-items:end start;padding:14px;color:var(--muted)}
+.ph span{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+
+/* list */
+.titles{display:grid;border-top:1px solid var(--line)}
+.t-row{display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,auto);gap:24px;padding-block:22px;border-bottom:1px solid var(--line);align-items:baseline;text-decoration:none;transition:padding .25s}
+a.t-row:hover{padding-left:10px}
+.t-row b{font-weight:500;letter-spacing:-.02em;font-size:clamp(22px,2.4vw,28px);line-height:1.15;display:block}
+.t-row .d{color:var(--muted);font-size:15px;display:block;margin-top:4px}
+.t-row .r{color:var(--muted);text-align:right}
+@media (max-width:640px){.t-row{grid-template-columns:1fr;gap:4px}.t-row .r{text-align:left}}
+.prev{position:fixed;left:0;top:0;width:260px;z-index:12;pointer-events:none;border-radius:4px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.prev .shot{aspect-ratio:4/3}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:start}
+.clip .lead{font-size:clamp(22px,2.4vw,28px);line-height:1.35;letter-spacing:-.015em;font-weight:400}
+.clip .by{display:none}
+.about .rt{display:grid;gap:18px;align-content:start;min-width:0}
+.about .rt>p{max-width:60ch;color:var(--muted)}
+.edu{display:grid;border-top:1px solid var(--line);margin-top:8px}
+.edu .t-row{grid-template-columns:110px minmax(0,1fr) auto;padding-block:16px}
+.edu .t-row b{font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:14px;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+@media (max-width:820px){.about{grid-template-columns:1fr}}
+
+/* contact */
+.contact{padding-block:120px 32px}
+.notice .k{display:block;color:var(--muted);margin-bottom:20px;font-family:var(--mono);font-size:12px;text-transform:uppercase}
+.notice h2{font-weight:500;letter-spacing:-.045em;font-size:clamp(52px,10vw,136px);line-height:.95;margin:0 0 24px}
+.notice .ct{font-size:clamp(18px,2vw,22px);line-height:1.45;color:var(--muted);max-width:40ch;margin-bottom:44px}
+.c-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-top:1px solid var(--line)}
+.c-links a,.c-links .lk{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 2px;border-bottom:1px solid var(--line);text-decoration:none;font-size:20px;letter-spacing:-.01em;transition:color .2s}
+.c-links a:hover{color:var(--muted)}
+.c-links .lk{display:grid;gap:4px}
+.c-links .lk small{font-family:var(--mono);font-size:11px;color:var(--muted);word-break:break-all}
+.notice .thanks{margin-top:28px;color:var(--muted)}
+footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);padding-block:28px 24px;border-top:1px solid var(--line);margin-top:64px}
+footer a{text-decoration:none}
+
+/* detail */
+.d-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:28px;color:var(--muted)}
+.back{text-decoration:none;transition:color .15s}
+.back:hover{color:var(--fg)}
+.d-head{padding-block:32px 48px;display:grid;gap:18px}
+.d-head .file{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted)}
+.d-head h1{font-weight:500;letter-spacing:-.045em;line-height:.95;margin:0;font-size:clamp(52px,9vw,124px);text-wrap:balance}
+.d-head .subtitle{font-size:clamp(19px,2.2vw,24px);line-height:1.4;color:var(--muted);max-width:44ch;font-weight:300}
+@media (prefers-reduced-motion:no-preference){.d-head{animation:fade .7s cubic-bezier(.2,.7,.1,1) both}}
+.hero-shot{border-radius:4px;overflow:hidden}
+.hero-shot .shot{aspect-ratio:var(--r,16/9)}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;border-bottom:1px solid var(--line);padding-block:32px 28px;margin:0}
+.meta div{display:grid;gap:6px;min-width:0}
+.meta dd{margin:0;font-size:17px}
+.meta dt{color:var(--muted)}
+.d-body{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:28px clamp(24px,5vw,72px);padding-block:56px}
+.d-body h2{margin:0;color:var(--muted);padding-top:5px}
+.d-body .txt{display:grid;gap:16px;max-width:62ch;min-width:0;font-size:17px;color:#cfcfcc}
+.d-body .txt.first p:first-child{font-size:clamp(20px,2.1vw,24px);line-height:1.4;color:var(--fg);letter-spacing:-.01em}
+@media (max-width:700px){.d-body{grid-template-columns:1fr;gap:12px}.d-body .txt{margin-bottom:24px}}
+.gal{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;align-items:start}
+.gal .it{display:grid;gap:8px;min-width:0;grid-column:span var(--span,6)}
+.gal .it .shot{aspect-ratio:var(--r,4/3)}
+.gal .it .zoom,.gal .it>.shot{border-radius:4px;overflow:hidden}
+.gal .gh,.vclips .gh{grid-column:1/-1;display:flex;align-items:baseline;gap:14px;padding-top:28px;border-top:1px solid var(--line);margin-top:20px;color:var(--muted)}
+.gal .gh:first-child{margin-top:0}
+.gal .gh b,.vclips .gh b{color:var(--fg);font-weight:500;font-size:20px;letter-spacing:-.01em;font-family:var(--sans);text-transform:none}
+@media (max-width:640px){.gal .it{grid-column:span var(--mspan,12)}}
+.zoom{all:unset;cursor:zoom-in;display:block;width:100%;overflow:hidden}
+.zoom .shot{transition:transform .7s cubic-bezier(.2,.7,.1,1)}
+.zoom:hover .shot{transform:scale(1.015)}
+.zoom:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.vclips{display:grid;gap:16px;margin-top:20px}
+.vclip{display:grid;gap:10px;min-width:0}
+.vclip video{display:block;width:100%;max-width:100%;aspect-ratio:16/9;background:#000;border-radius:4px}
+.ytc{display:block;color:inherit;text-decoration:none}.ytt{position:relative;display:block;aspect-ratio:var(--r);overflow:hidden;background:#151515}.ytt img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s,filter .3s;filter:brightness(.75)}.ytc:hover .ytt img{transform:scale(1.02);filter:brightness(.9)}.ytp{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(10,10,10,.6);border:1px solid rgba(255,255,255,.5);backdrop-filter:blur(6px)}.ytp:after{content:"";position:absolute;left:31px;top:25px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff}.ytc .cap{display:block;margin-top:10px;font-size:13px;color:var(--muted)}.ytc:hover .cap{color:var(--fg)}.btn.play{margin:-8px 0 32px}.btn{display:inline-flex;gap:8px;align-items:center;text-decoration:none;background:var(--fg);color:var(--bg);border-radius:999px;padding:10px 20px;font-weight:500;font-size:15px;width:max-content}
+.btn:hover{background:#fff}
+.next{display:grid;gap:10px;text-decoration:none;border-top:1px solid var(--line);margin-top:96px;padding-block:40px 24px}
+.next b{font-weight:500;letter-spacing:-.045em;font-size:clamp(44px,8vw,104px);line-height:.95;transition:color .2s}
+.next:hover b{color:var(--muted)}
+
+/* interactive deck */
+.deck{margin-top:40px;display:grid;gap:16px}
+.deck-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.deck-hint{color:var(--muted);font-size:15px;margin-top:6px;max-width:52ch}
+.deck-btns{display:flex;gap:6px;flex-wrap:wrap}
+.table{--cw:clamp(78px,12.5vw,158px);position:relative;height:calc(var(--cw) * 1.4773 + 150px);border-radius:6px;overflow:hidden;
+  background:radial-gradient(ellipse 70% 90% at 50% 100%,#1d1d1c 0%,#121212 55%,#0c0c0c 100%);border:1px solid var(--line);touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.table::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:6px 6px;pointer-events:none}
+.pc{position:absolute;left:0;top:0;width:var(--cw);aspect-ratio:375/554;cursor:grab;touch-action:none;will-change:transform;outline:none}
+.pc:active{cursor:grabbing}
+.pc-in{position:absolute;inset:0;border-radius:7px;overflow:hidden;isolation:isolate;backface-visibility:hidden;box-shadow:0 4px 10px rgba(0,0,0,.5);transition:box-shadow .2s}
+.pc.lift .pc-in{box-shadow:0 22px 34px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.12)}
+.pc:focus-visible .pc-in{box-shadow:0 0 0 2px var(--fg),0 22px 34px rgba(0,0,0,.65)}
+.pc img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.pc-shine{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .25s;mix-blend-mode:screen;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,30%),rgba(255,255,255,.38),rgba(255,255,255,0) 45%),
+  linear-gradient(115deg,transparent 20%,rgba(255,120,200,.16) 36%,rgba(120,220,255,.18) 50%,rgba(255,240,140,.16) 64%,transparent 80%)}
+.pc.lift .pc-shine{opacity:1}
+.deck-info{display:flex;align-items:baseline;gap:6px 14px;flex-wrap:wrap;min-height:28px;font-size:16px}
+.deck-info b{font-weight:500;font-size:20px;letter-spacing:-.01em}
+.deck-info .cn{color:var(--muted)}
+
+
+/* email */
+.mail{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.mail-addr{font-size:clamp(22px,3vw,34px);letter-spacing:-.02em;user-select:all;-webkit-user-select:all;word-break:break-all}
+
+/* captions */
+.cap{color:var(--muted);font-size:14px;line-height:1.45;margin-top:2px;max-width:70ch}
+.hero-shot + .cap{margin-top:10px}
+.fcap{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font-size:13px;line-height:1.35;color:#ededeb;background:linear-gradient(transparent,rgba(0,0,0,.72));pointer-events:none}
+
+/* film strip */
+.film-sec,.cmp-sec{margin-top:24px;display:grid;gap:18px}
+.cmp-sec{margin-top:88px}
+.film-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.film-head h2{font-weight:500;letter-spacing:-.03em;font-size:clamp(28px,3.6vw,40px);line-height:1.05;margin:6px 0 0}
+.film-ctl{display:flex;align-items:center;gap:8px}
+.film-ctl .mono{min-width:6ch;text-align:right;font-variant-numeric:tabular-nums}
+.film-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--fg);font-size:16px;cursor:pointer}
+.film-btn:hover{border-color:var(--fg)}
+.film{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;outline:none;
+  margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.film::-webkit-scrollbar{display:none}
+.film.drag{scroll-snap-type:none;cursor:grabbing}
+.film:focus-visible{outline:2px solid var(--fg);outline-offset:4px}
+.fi{all:unset;position:relative;flex:0 0 auto;height:clamp(280px,56vh,560px);aspect-ratio:var(--r);max-width:86vw;scroll-snap-align:start;border-radius:4px;overflow:hidden;cursor:zoom-in;background:var(--panel)}
+.film.drag .fi{cursor:grabbing}
+.fi img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;transition:transform .7s cubic-bezier(.2,.7,.1,1)}
+.fi:hover img{transform:scale(1.025)}
+.fi:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.film-bar{height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.film-bar span{display:block;height:100%;width:20%;background:var(--fg);transition:width .15s}
+/* screen to print */
+.cmp{display:grid;gap:40px}
+.cmp-row{--h:clamp(220px,40vw,440px);display:flex;flex-wrap:wrap;gap:14px 28px;align-items:flex-end;border-top:1px solid var(--line);padding-top:24px}
+.cmp-col{display:grid;gap:10px;min-width:0;max-width:100%}
+.cmp-row.two{--h:clamp(200px,29vw,350px)}
+.cmp-cards{display:flex;gap:10px}
+.cmp-cards img{height:var(--h);width:auto;aspect-ratio:375/554;object-fit:cover;border-radius:6px;box-shadow:0 14px 30px rgba(0,0,0,.5);display:block;max-width:100%}
+.cmp-cards.n2 img{max-width:calc(50% - 5px)}
+.cmp-photo{height:var(--h);aspect-ratio:var(--r);max-width:100%;border-radius:4px;overflow:hidden}
+.cmp-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.cmp-cap{flex-basis:100%;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:baseline}
+.cmp-cap b{font-weight:500;font-size:18px}
+@media (max-width:700px){.cmp-row{--h:min(300px,72vw)}.cmp-col{flex-basis:100%}.cmp-photo{height:auto;width:100%}}
+
+/* mini hand cover */
+.mh .mh-table{background:radial-gradient(ellipse 70% 90% at 50% 105%,#232321 0%,#141414 55%,#0d0d0d 100%)}
+.mh .mh-table::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:6px 6px}
+.w-img.mh:hover .shot{transform:none}
+.mh-c{--w:24%;position:absolute;left:50%;top:50%;width:var(--w);aspect-ratio:375/554;margin-left:calc(var(--w) / -2);
+  transform:translate(calc(var(--o) * 62%), calc(-46% + var(--o) * var(--o) * 2.2%)) rotate(calc(var(--o) * 7deg));
+  transition:transform .55s cubic-bezier(.2,.8,.2,1);z-index:1}
+.mh-in{position:absolute;inset:0;border-radius:6px;overflow:hidden;box-shadow:0 10px 22px rgba(0,0,0,.55);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.mh-in img{width:100%;height:100%;object-fit:cover;display:block}
+.mh-c .pc-shine{opacity:0}
+@media (prefers-reduced-motion:no-preference){.mh-in{animation:mhb 3.4s ease-in-out var(--d) infinite}}
+@keyframes mhb{0%,100%{translate:0 0;rotate:0deg}50%{translate:0 -4px;rotate:.8deg}}
+.w-img.mh:hover .mh-c{transform:translate(calc(var(--o) * 74%), calc(-49% + var(--o) * var(--o) * 2.6%)) rotate(calc(var(--o) * 8deg))}
+.mh-c:hover{z-index:5}
+.mh-c:hover .mh-in{transform:translateY(-12%) scale(1.12);box-shadow:0 26px 40px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.14)}
+.mh-c:hover .pc-shine{opacity:1}
+.mh-tag{position:absolute;left:14px;bottom:12px;color:var(--muted);z-index:6}
+@media (max-width:820px){.mh-c{--w:27%}}
+
+/* quiz */
+.quiz{margin-top:72px;display:grid;gap:20px}
+.quiz-head h2{font-weight:500;letter-spacing:-.03em;font-size:clamp(30px,4vw,44px);line-height:1.05;margin:6px 0 8px}
+.quiz-box{border:1px solid var(--line);border-radius:6px;background:radial-gradient(ellipse 80% 100% at 50% 0%,#191918,#0d0d0d);padding:clamp(20px,4vw,44px);min-height:360px;display:grid;align-items:center}
+.qz-intro{display:grid;justify-items:center;gap:28px;padding-block:12px}
+.qz-backs{position:relative;width:120px;height:178px}
+.qz-back,.qz-cb{position:absolute;inset:0;border-radius:8px;border:1px solid #3a3426;
+  background:radial-gradient(circle at 50% 50%,transparent 26%,#c9a95b 27% 28%,transparent 29%),repeating-conic-gradient(from 0deg at 50% 50%,#1b1813 0 10deg,#221e17 10deg 20deg);box-shadow:inset 0 0 0 6px #14120e,inset 0 0 0 7px #6e5d36,0 10px 24px rgba(0,0,0,.5)}
+.qz-back{transform:rotate(calc((var(--k) - 1) * 9deg)) translateY(calc(var(--k) * -3px))}
+@media (prefers-reduced-motion:no-preference){.qz-backs{animation:qzf 3.2s ease-in-out infinite}}
+@keyframes qzf{50%{transform:translateY(-6px)}}
+.qz-q{display:grid;gap:18px;max-width:720px;width:100%;margin:0 auto}
+.qz-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.qz-link{background:none;border:0;color:var(--muted);font:inherit;cursor:pointer;padding:0}
+.qz-link:hover{color:var(--fg)}
+.qz-bar{height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.qz-bar span{display:block;height:100%;background:var(--fg);transition:width .4s}
+.qz-q h3{font-weight:500;font-size:clamp(22px,2.8vw,30px);letter-spacing:-.02em;line-height:1.2;margin:4px 0 6px;text-wrap:balance}
+.qz-opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:600px){.qz-opts{grid-template-columns:1fr}}
+.qz-opt{display:flex;gap:14px;align-items:baseline;text-align:left;font:400 17px/1.35 var(--sans);color:var(--fg);background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:6px;padding:16px 18px;cursor:pointer;transition:border-color .15s,background .15s,transform .15s}
+.qz-opt .mono{color:var(--muted)}
+.qz-opt:hover{border-color:var(--fg);background:rgba(255,255,255,.06);transform:translateY(-2px)}
+.qz-res{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(24px,5vw,56px);align-items:center;max-width:860px;margin:0 auto}
+@media (max-width:640px){.qz-res{grid-template-columns:1fr;justify-items:center;text-align:center}.qz-acts{justify-content:center}}
+.qz-card{all:unset;cursor:pointer;width:clamp(170px,22vw,240px);aspect-ratio:375/554;perspective:1200px;display:block}
+.qz-card:focus-visible{outline:2px solid var(--fg);outline-offset:4px;border-radius:8px}
+.qz-flip{position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;transform:rotateY(180deg) scale(.9);transition:transform 1.1s cubic-bezier(.2,.75,.15,1)}
+.qz-res.on .qz-flip{transform:rotateY(0) scale(1)}
+.qz-card:hover .qz-flip{transform:rotateY(-6deg) scale(1.03)}
+.qz-flip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:8px;backface-visibility:hidden;box-shadow:0 26px 50px rgba(0,0,0,.6)}
+.qz-flip .qz-cb{transform:rotateY(180deg);backface-visibility:hidden}
+.qz-txt{display:grid;gap:12px;min-width:0;opacity:0;transform:translateY(10px);transition:opacity .5s .6s,transform .5s .6s}
+.qz-res.on .qz-txt{opacity:1;transform:none}
+.qz-txt h3{font-weight:500;font-size:clamp(28px,4vw,44px);letter-spacing:-.03em;line-height:1.05;margin:0}
+.qz-txt h3 .cn{color:var(--muted);font-size:.55em;letter-spacing:0}
+.qz-motto{font-size:19px}
+.qz-acts{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:6px}
+@media (prefers-reduced-motion:reduce){.qz-flip,.qz-txt{transition:none}}
+
+/* card close-up */
+.cf{position:fixed;inset:0;z-index:35;display:grid;place-items:center;
+  padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.cf-bg{position:absolute;inset:0;background:rgba(5,5,5,.86);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .35s}
+.cf.on .cf-bg{opacity:1}
+.cf-card{position:fixed;left:0;top:0;transform-origin:0 0;z-index:2;cursor:pointer;will-change:transform}
+.cf-card .pc-in{box-shadow:0 40px 80px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.14);border-radius:12px}
+.cf-card .pc-shine{opacity:1}
+.cf-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;-webkit-user-drag:none}
+.cf-card .pc-in{background:#111}
+.cf-ui{position:absolute;left:0;right:0;bottom:max(20px,env(safe-area-inset-bottom,0px));z-index:3;display:grid;justify-items:center;gap:12px;padding-inline:16px;text-align:center;opacity:0;transform:translateY(10px);transition:opacity .3s .4s,transform .3s .4s;pointer-events:none}
+.cf.on .cf-ui{opacity:1;transform:none}
+.cf-name{display:flex;align-items:baseline;gap:6px 12px;flex-wrap:wrap;justify-content:center}
+.cf-name b{font-weight:500;font-size:clamp(22px,3vw,30px);letter-spacing:-.02em}
+.cf-name .cn{color:var(--muted);font-size:18px}
+.cf-motto{color:var(--muted);font-size:15px}
+.cf-btns{display:flex;gap:8px;pointer-events:auto}
+.cf-btns button{font:500 13px var(--sans);background:rgba(20,20,20,.8);border:1px solid var(--line);color:var(--fg);border-radius:999px;padding:6px 14px;cursor:pointer}
+.cf-btns button:hover{border-color:var(--fg)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:30;
+  padding:max(12px,env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) max(12px,env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.lb-in{position:relative;width:100%;height:100%;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:10px}
+.lb-stage{position:relative;overflow:hidden;display:grid;place-items:center;touch-action:none;cursor:zoom-in;user-select:none;-webkit-user-select:none}
+.lb-stage.zoomed{cursor:grab}
+.lb-stage.zoomed:active{cursor:grabbing}
+.lb-stage img{position:absolute;inset:0;margin:auto;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;transform-origin:center;will-change:transform;-webkit-user-drag:none}
+.lb-stage .shot{width:min(100%,1100px);aspect-ratio:16/9}
+.lb-nav{position:absolute;top:calc(50% - 40px);width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(20,20,20,.7);color:var(--fg);font-size:20px;cursor:pointer;z-index:2;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .15s}
+.lb-nav:hover{background:rgba(60,60,60,.85)}
+.prev-b{left:4px}.next-b{right:4px}
+.lb-bar{display:flex;align-items:center;gap:16px;color:var(--muted);flex-wrap:wrap;min-width:0}
+.lb-count{color:var(--fg);font-variant-numeric:tabular-nums}
+.lb-cap{flex:1;min-width:0;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-tools{display:flex;align-items:center;gap:6px}
+.lb-tools .mono{min-width:4.5ch;text-align:center;font-variant-numeric:tabular-nums}
+.lb-bar button{font:500 13px var(--sans);background:none;border:1px solid var(--line);color:var(--fg);border-radius:999px;padding:5px 12px;cursor:pointer;min-width:32px}
+.lb-bar button:hover{border-color:var(--fg)}
+@media (max-width:640px){.lb-nav{display:none}.lb-cap{flex-basis:100%;order:3}.lb-tools{margin-left:auto}}
+
+/* edit mode */
+[contenteditable]{outline:1px dashed #4a4a48;outline-offset:3px;border-radius:2px;cursor:text;min-width:2ch}
+[contenteditable]:hover{outline-color:var(--muted)}
+[contenteditable]:focus{outline:1px solid var(--fg)}
+[contenteditable]:empty::before{content:attr(data-ph);color:var(--muted)}
+.ctls{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.ctl{font-family:var(--mono);font-size:11px;text-transform:uppercase;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:4px 10px;cursor:pointer}
+.ctl:hover{border-color:var(--fg)}
+.ctl.add{border-style:dashed;border-color:var(--muted)}
+.ctl.warn{color:var(--danger);border-color:var(--danger)}
+.field{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.field span[contenteditable]{color:var(--fg);word-break:break-all}
+.editfab{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:15;
+  font:500 14px var(--sans);background:var(--fg);color:var(--bg);border:0;border-radius:999px;padding:10px 18px;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.5)}
+.editbar{position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--panel);border-top:1px solid var(--line);
+  padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.editbar .in{max-width:var(--w);margin:0 auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.editbar .st{flex:1;min-width:0;color:var(--muted);font-size:14px}
+.editbar .st b{color:var(--fg);font-weight:500}
+.editbar button{font:500 14px var(--sans);border-radius:999px;padding:8px 16px;cursor:pointer;border:1px solid var(--line);background:none;color:var(--fg)}
+.editbar button.primary{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.editbar button:disabled{opacity:.5;cursor:default}
+@media (prefers-reduced-motion:reduce){*,*::before{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+
+/* language + theme switches */
+.nav-tools{display:flex;align-items:center;gap:10px}
+.lang-seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px}
+.lang-seg button{all:unset;cursor:pointer;padding:4px 9px;border-radius:999px;color:var(--muted);font:inherit;letter-spacing:inherit;line-height:1.2}
+.lang-seg button:hover{color:var(--fg)}
+.lang-seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.lang-seg button:focus-visible,.thm-btn:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.thm-btn{all:unset;cursor:pointer;display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;color:var(--fg)}
+.thm-btn:hover{border-color:var(--muted)}
+html[data-theme="light"] .thm-btn svg{transform:rotate(180deg)}
+html:lang(zh-Hans) .cn{display:none}
+html:lang(zh-Hans) .mono{letter-spacing:.04em}
+@media (max-width:640px){.nav .in{row-gap:10px}.nav-tools{margin-left:auto}}
+html[data-theme="light"]{--bg:#f5f4f0;--panel:#ebe9e4;--fg:#151514;--muted:#6a6a66;--faint:#9b9b96;--line:#dcdad4;--hl:#151514;color-scheme:light}
+html[data-theme="light"] .d-body .txt{color:#3b3b38}
+html[data-theme="light"] .btn:hover{background:#000}
+html[data-theme="light"] .ytt{background:#e4e2dc}
+html[data-theme="light"] .quiz-box{background:radial-gradient(ellipse 80% 100% at 50% 0%,#ffffff,#ecebe6)}
+html[data-theme="light"] .qz-opt{background:rgba(0,0,0,.025)}
+html[data-theme="light"] .qz-opt:hover{background:rgba(0,0,0,.05)}
+</style>
+<div id="app"></div><div class="prev" id="prev" hidden></div><div class="lb" id="lb" hidden><div class="lb-in" role="dialog" aria-modal="true" aria-label="Image viewer"><div class="lb-stage" id="lbStage"></div><button class="lb-nav prev-b" id="lbPrev" aria-label="Previous image">←</button><button class="lb-nav next-b" id="lbNext" aria-label="Next image">→</button><div class="lb-bar"><span class="mono lb-count" id="lbCount"></span><span class="lb-cap" id="lbCap"></span><span class="lb-tools"><button id="lbOut" aria-label="Zoom out">−</button><span class="mono" id="lbZoom">100%</span><button id="lbIn" aria-label="Zoom in">+</button><button id="lbFit">Fit</button><button id="lbClose">Close · Esc</button></span></div></div></div><button class="editfab" id="editFab" hidden>Edit site</button><div class="editbar" id="editBar" hidden><div class="in"><span class="st" id="editSt"></span><button id="btnDiscard">Discard</button><button class="primary" id="btnSave">Save</button></div></div><input type="file" id="fileIn" accept="image/*" multiple hidden>
+<script type="application/json" id="site-data">{"profile": {"name": "Mengting Li", "location": "Copenhagen, Denmark · Available for new projects", "roles": "3D Artist · 2D Artist · Art Direction", "tagline": "Chinese game artist studying Visual and Game Design at the Royal Danish Academy. I build immersive worlds that connect people through play and imagination.", "about": ["I'm a game art student working across 2D and 3D: character design, illustration, texturing and visual storytelling. My work centers on building worlds that connect people through play and imagination.", "I'm looking for a design internship as part of my studies at the Royal Danish Academy, where I can bring character design, illustration and a sense of play to products people hold in their hands.", "I try to stay humble and curious, and to keep room for creative growth in every project."], "education": [{"years": "2025 – 2027", "school": "Royal Danish Academy", "program": "Visual and Game Design", "place": "Copenhagen"}, {"years": "2021 – 2025", "school": "Beijing Institute of Graphic Communication", "program": "Visual Communication Design", "place": "Beijing"}], "proficiency": "Unreal Engine 5, Maya, ZBrush, Substance Painter, Substance Designer, Marmoset Toolbag 5, Photoshop, Illustrator", "contactKicker": "Say hello", "contactTitle": "Let's collaborate", "contactText": "Open to internships and junior roles. Get in touch about your project, or follow my work on the channels below.", "links": [{"label": "LinkedIn", "url": "https://linkedin.com/in/mengting-li-401a92391"}, {"label": "ArtStation", "url": "https://mengting_li.artstation.com"}, {"label": "itch.io", "url": "https://mengting-li.itch.io/"}, {"label": "Instagram", "url": "https://www.instagram.com/mengting1319"}, {"label": "YouTube", "url": "http://www.youtube.com/@%E6%9D%8E%E6%A2%A6%E5%A9%B7-b7o"}], "thanks": "Thank you for visiting. I'll get back to you as soon as possible.", "headline": "Game artist builds worlds of play and imagination", "email": "mengtingli83@gmail.com"}, "projects": [{"id": "archetype-mirror", "group": "work", "type": "2D", "title": "Archetype Mirror", "hue": 45, "subtitle": "Graduation project: a card-based character series based on the twelve Jungian archetypes.", "meta": {"Year": "2025", "Timeframe": "", "Category": "Graduation project", "Tools": ""}, "overview": ["The series turns abstract psychological ideas into clear visual identities through character design, shape language, color and materials."], "images": [{"label": "Cards on a silver mirror tray", "src": "assets/8786494c7eae044988c9f3df7065186f.jpg", "r": 0.756}, {"label": "A fanned spread", "src": "assets/4995efca8b7bd915fbdef6cf0284be49.jpg", "r": 0.771}, {"label": "Flat lay of the deck", "src": "assets/2c701257c7ab207ede86f1b092fba1a9.jpg", "r": 0.753}, {"label": "XII The Lover, in hand", "src": "assets/4eade1b6b25f567f48913bb32b1c3458.jpg", "r": 0.753}, {"label": "VII The Hero and XII The Lover", "src": "assets/dd9bf2ac8745577f72d432084157b321.jpg", "r": 1.508}, {"label": "I The Magician and II The Jester", "src": "assets/590ef853e195130be5d75e4970727d96.jpg", "r": 1.49}, {"label": "III The Ruler and IV The Caregiver", "src": "assets/cd791b57cf161fcc41a543a89d27f8ff.jpg", "r": 1.504}, {"label": "VI The Explorer and VIII The Sage", "src": "assets/cd2e387f30557c86058608ab669aa5a4.jpg", "r": 1.494}, {"label": "X The Everyman and XI The Outlaw", "src": "assets/72874f8f1874dd6c0defe80d2a45f37d.jpg", "r": 0.749}, {"label": "Box and guide booklet", "src": "assets/665ef4d199f6194250f942ddb683c202.jpg", "r": 0.749}], "deck": [{"num": "I", "name": "The Magician", "cn": "魔术师", "src": "assets/dfa1b5d84e8e642c30c1869523c2c400.jpg", "motto": "Transformation. Turns vision into reality."}, {"num": "II", "name": "The Jester", "cn": "小丑", "src": "assets/fd1d805995ce3f489c056a7fe322c701.jpg", "motto": "Joy. Lives fully in the moment."}, {"num": "III", "name": "The Ruler", "cn": "统治者", "src": "assets/c802e4eced83214a6935277dc3840848.jpg", "motto": "Control. Brings order to chaos."}, {"num": "IV", "name": "The Caregiver", "cn": "照顾者", "src": "assets/41f86e5dc9aa19f2b9c81523fb9741ab.jpg", "motto": "Service. Protects and nurtures others."}, {"num": "V", "name": "The Creator", "cn": "创造者", "src": "assets/f84f18f24863b5e8119454b5448d9e06.jpg", "motto": "Imagination. Gives form to new ideas."}, {"num": "VI", "name": "The Explorer", "cn": "探险家", "src": "assets/c2dad94f9553e95879f0d2c37005204b.jpg", "motto": "Freedom. Seeks what lies beyond."}, {"num": "VII", "name": "The Hero", "cn": "英雄", "src": "assets/b914b54ff9036df89d1e2f61f90bc22d.jpg", "motto": "Courage. Proves worth through action."}, {"num": "VIII", "name": "The Sage", "cn": "智者", "src": "assets/17d0a20857842eb4759949189b2e35ed.jpg", "motto": "Wisdom. Searches for the truth."}, {"num": "IX", "name": "The Innocent", "cn": "天真者", "src": "assets/62fb693129fa6d1b1e7382f0d885df50.jpg", "motto": "Faith. Longs for paradise."}, {"num": "X", "name": "The Everyman", "cn": "常人", "src": "assets/4eea7fdd3bb43025607c20000a0ea3e0.jpg", "motto": "Belonging. Connects with others."}, {"num": "XI", "name": "The Outlaw", "cn": "反叛者", "src": "assets/a9af9e0c45174bf950855eff70e13494.jpg", "motto": "Liberation. Breaks the rules."}, {"num": "XII", "name": "The Lover", "cn": "情种", "src": "assets/9ba808a0ec3cffaef41625284dcede9b.jpg", "motto": "Passion. Follows the heart."}], "kind": "2D Character Design · Card Art", "compare": [{"cards": [11], "photo": "assets/4eade1b6b25f567f48913bb32b1c3458.jpg", "r": 0.753, "note": ""}, {"cards": [6], "photo": "assets/dd9bf2ac8745577f72d432084157b321.jpg", "r": 1.508, "note": ""}, {"cards": [0, 1], "photo": "assets/590ef853e195130be5d75e4970727d96.jpg", "r": 1.49, "note": ""}], "tags": ["Illustration"]}, {"id": "fight-of-the-throne", "group": "work", "type": "2D", "kind": "2D Board Game Art", "title": "Fight of the Throne", "hue": 5, "subtitle": "A German-style strategy board game set in a war-torn animal kingdom.", "meta": {"Year": "2024", "Timeframe": "3 months", "Category": "Personal project", "Tools": "Photoshop · Illustrator"}, "overview": ["The game is set in a war-torn animal kingdom, where lords of different regions have fought for power for decades.", "Players take on the role of different lords to expand their territory and grow their power. Each lord has unique skills and architecture, and players use those traits to fight for the throne and win the game."], "images": [{"label": "Key art with the animal lords", "src": "assets/ff4343b8891afb69af867dc0e5e0f3be.jpg", "r": 1.767}, {"label": "Rules sheet: game goal, components and land event cards", "src": "assets/86f3eca07cf69fa6b4fa360a9d959217.png", "r": 1.744}, {"label": "Kingdom event cards and building tiles", "src": "assets/f379d9eb6cc47da95ebf6ba93e7474d1.png", "r": 1.63}, {"label": "Lord sheet: Ishella, Knight", "src": "assets/928e34a365dd40b8de15984231af241a.jpg", "r": 3.36}, {"label": "Lord sheet: Grasiendi, Duke", "src": "assets/65524d427b9347e8d945ae0f4e80b533.jpg", "r": 3.36}, {"label": "Lord sheet: Eydmork, Bandit", "src": "assets/e78d5fadb98ac97405b152ad5bb7dde1.jpg", "r": 3.36}, {"label": "Lord sheet: Halendi, ENCHANIER\n", "src": "assets/6d89afa8a04a77ab4f32e7cb91d46272.jpg", "r": 3.36}], "tags": ["Concept Art", "Illustration"]}, {"id": "case-of-the-black-wing", "group": "work", "type": "2D", "kind": "2D Concept · Narrative", "title": "Case of the Black Wing", "hue": 265, "subtitle": "A detective mystery in a village where everyone wears a mask.", "meta": {"Year": "2026", "Timeframe": "Ongoing", "Category": "Detective visual novel", "Tools": "Photoshop · Clip Studio Paint"}, "overview": ["An indie project I'm currently developing, which began in last semester's Art Direction course. The story takes place at the beginning of the last century, when a detective is assigned to investigate a remote village.", "Something strange has happened there: every villager wears a mask. What secrets are waiting for the detective to uncover?"], "images": [{"label": "Title screen: newspaper-collage menu with the raven key art", "src": "assets/64cad9c70549cf401745bf02c43f3f32.jpg", "r": 1.778}, {"label": "Poster with the tagline “This is our land”", "src": "assets/3fa9cfbaa7a445af73e4fab5f75db8e6.jpg", "section": "The World", "note": "A remote village early last century, where every villager wears a mask", "r": 1.745}, {"label": "Case file, People tab: suspect portraits with handwritten notes", "src": "assets/21f426eaa8a63d63bd5d69ea0b51f59b.jpg", "section": "Characters", "note": "The suspects, as the detective records them in the case file", "r": 1.778}, {"label": "Case file, Places tab: taped photos and newspaper clippings", "src": "assets/080502102feac005674e2c5062526d1f.png", "section": "Investigation", "note": "Collecting clues, visiting places and questioning villagers", "r": 1.778}, {"label": "Interrogation at the railway, in black-and-white paper collage", "src": "assets/fd96560798b4a485a586b890ad600c82.jpg", "r": 1.778}, {"label": "Boss encounter with the many-eyed Black Wing", "src": "assets/ade65c9798eef640fd89a9bf18ea8025.png", "section": "The Black Wing", "note": "The final encounter", "r": 1.778}, {"label": "The main screens together: title, dialogue, case file and boss encounter", "src": "assets/f1e1bd95ab89142debf02e55ad1100f9.png", "section": "Overview", "note": "The main screens side by side", "r": 1.725}], "clips": [{"label": "Gameplay video", "src": "assets/c495d09b719a26fad91472891b77c04f.mp4"}], "tags": ["Concept Art", "Illustration"]}, {"id": "fyrmester", "group": "work", "type": "3D", "kind": "Key Art · Character Concept · 3D Props · Texturing", "title": "Fyrmester: The Burden of Light", "hue": 215, "subtitle": "A psychological maritime thriller set in 19th-century Denmark, shaped through concept art, UI and stylized 3D.", "meta": {"Year": "2026", "Role": "CG Artist", "Team": "WiggleTree Studio", "Category": "DADIU game production", "Platform": "Windows"}, "overview": ["A psychological maritime thriller set in 19th-century Denmark. You keep a lighthouse running through the night, feeding the stove, fixing the pump and keeping the light alive.", "My part: the key art poster, the character concept for the keeper, and a set of stylized 3D props, modelled and hand-textured, that furnish the lighthouse interior."], "images": [{"label": "Title screen: the lighthouse at night with the game menu", "src": "assets/663cb689da8f634fecd95dc3566dad9a.jpg", "r": 2.216}, {"label": "Key art poster: the lighthouse keeper, his pipe and the storm", "src": "assets/5fe772208d6768ff088c8ac4b663cc0a.jpg", "section": "Key Art", "note": "A poster built around the keeper and the light he carries", "r": 0.707}, {"label": "Character concept: early sketches, three outfit iterations and the chosen turnaround", "src": "assets/e2b618eaa89533f6dd104d740d2f2a71.jpg", "section": "Character Concept", "note": "From first sketches to the final front, side and back views", "r": 1.996}, {"label": "Jørgen asleep in a rocking chair under a blanket, modelled as one piece to save rigging time", "src": "assets/6ce9ef530a495f1cc47c1858b4ee1f22.jpg", "r": 1.815}, {"label": "Bookshelf, low shelf and shovel", "src": "assets/416f87d0bdfde0092e37be814915aeae.jpg", "section": "3D Props", "note": "Stylized, hand-textured props for the lighthouse interior", "r": 1.277}, {"label": "Coastal rock with a mossy top", "src": "assets/ff05da92f317739a42d48ecc3063f570.jpg", "r": 1.074}, {"label": "Storage bed with coal bucket and ladder", "src": "assets/ce15f4c249b220b290ccf3cf2a888543.jpg", "r": 1.627}, {"label": "Bunk bed and coal stove with chimney pipes", "src": "assets/82fd118d8c5f95b73a29ad405bb64d71.jpg", "r": 1.822}, {"label": "Modular wall panels, doors and wardrobe", "src": "assets/d34bb817e1864053090dd99c0a1efeaa.jpg", "r": 1.948}, {"label": "Stove, kettle and water pump with their texture sheets", "src": "assets/7c1e653bedd5fb4ebfdc81bc0225665e.jpg", "section": "Texturing", "note": "Painted materials and the UV layouts behind them", "r": 1.442}, {"label": "Watch the game video on YouTube", "src": "assets/f6a0dadb40c5ca32533d74e048f068ab.jpg", "section": "In Game", "note": "The props in place, lit and interactive", "r": 1.816, "yt": "https://youtu.be/m6NMnlolrgI"}, {"label": "In game: repairing the water pump while windows and lights need attention", "src": "assets/35e77471a9e44b13a8bfb5ede09cd8c1.jpg", "r": 1.826}], "tags": ["Concept Art", "Texture Art", "3D Environment"], "play": {"label": "Download on itch.io", "url": "https://wiggletreestudio.itch.io/fyrmester-burden-of-light"}}, {"id": "the-forest-nook", "group": "work", "type": "3D", "kind": "3D Environment", "title": "The Forest Nook", "hue": 30, "subtitle": "A warm fantasy interior: a scholar's secluded home in the forest.", "meta": {"Year": "2025", "Timeframe": "20 days", "Category": "Personal project", "Engine": "Unreal Engine 5"}, "tools": "Maya · ZBrush · Substance Painter · Substance Designer · Marmoset Toolbag 5 · Photoshop", "overview": ["The scene is the secluded home of a scholar living in the forest. The scholar's love of nature is told through detailed textures throughout the room."], "process": ["Wood grain and flooring materials were made in Substance Designer, along with a fireplace brick texture, a stone brick wall texture, and custom upholstery and fabric patterns for the sofa.", "Smaller props were textured in Substance Painter. Models were built in Maya and rendered in Unreal Engine, where books and flooring were placed with Blueprints."], "images": [{"label": "Final render in Unreal Engine 5: the scholar's study at night", "src": "assets/23f67acfd37a78e71421cb7e24b0d9eb.png", "r": 1.709}, {"label": "Fireplace corner and bookshelves under warm firelight", "src": "assets/764a66caa56bc366a0af889922db9000.png", "r": 1.709}, {"label": "Asset set: furniture, shelves, stone arch and brick wall", "src": "assets/01780d888bd947e388d6da42386ef4cc.png", "r": 1.844}, {"label": "Wood grain in Substance Designer: Tile Sampler base with Warp, Cloud Noise and Dirt detail", "src": "assets/8cbf5d541c8abb2d3b8e19b44278013b.png", "r": 1.983}, {"label": "Second wood variant and a patterned fabric built from Shape and Transform 2D nodes", "src": "assets/f31a41a3a9ae0b33f9ceb15434406977.png", "r": 1.394}, {"label": "Red brick: Brick Generator and Flood Fill for variation, Cells noise for cracks", "src": "assets/124f6ae877cbd885371895b7f1d412ab.png", "r": 1.516}, {"label": "Stone brick from Tile Sampler and Distance; quilted sofa fabric", "src": "assets/034f0bbe4854674a5ac0508dbf75b699.png", "r": 1.862}, {"label": "Modeling in Maya, UV layout and material assignment", "src": "assets/e01708f842db14cff97c0b633f665229.png", "r": 1.195}, {"label": "Assembly in Unreal: meshes, materials, Blueprint-placed books and lighting", "src": "assets/18c01a6cd5d090d61ea44493d411829c.png", "r": 2.179}], "tags": ["Texture Art", "3D Environment"]}, {"id": "nauaura", "group": "work", "type": "3D", "kind": "3D Environment", "title": "NAUAURA", "hue": 190, "subtitle": "A bioluminescent fantasy world inspired by underwater ecosystems.", "meta": {"Year": "2025", "Timeframe": "1 month", "Category": "Personal project", "Engine": "Unreal Engine 5"}, "tools": "Maya · ZBrush · Substance Painter · Substance Designer · Marmoset Toolbag 5 · Photoshop", "overview": ["An original fantasy realm deep in an ocean forest, home to invented creatures. The project is inspired by the creatures and landscapes of the Avatar films, aiming for a vibrant and mysterious world."], "process": ["All assets follow a PBR workflow. Models were built in Maya, with detail sculpted in ZBrush where needed. Details were baked in Marmoset Toolbag and materials were finished in Substance Painter."], "video": "https://www.youtube.com/watch?v=hge_E-bzg6g", "images": [{"label": "Key art: a glowing coral and mushroom forest under the sea", "src": "assets/ba1db7503aed694ab306aa5ec9d63f5e.jpg", "r": 1.689}, {"label": "Overview sheet: the world, its creatures and gameplay", "src": "assets/6e1c01cecfa844f436d3e79bd4fd3a84.png", "r": 1.591}, {"label": "Asset preparation: references and sculpts of coral, plants and creatures", "src": "assets/53c0118334b3b62db1fd132b0bef4b58.png", "r": 1.346}, {"label": "Pipeline from Maya modeling to Substance texturing to Unreal assembly", "src": "assets/e4e9bfe48375b21363b87bbc33de93b7.png", "r": 2.022}, {"label": "Sky atmosphere, fog, lighting and particle effects in Unreal", "src": "assets/fd74939061256a8c74130f6bc2e67d39.png", "r": 1.639}], "tags": ["Texture Art", "3D Environment"]}, {"id": "deathwish", "group": "more", "type": "Game jam", "title": "Game Jam 1: Deathwish", "hue": 350, "subtitle": "Game jam entry.", "meta": {"Date": "Jul 2025", "Category": "Game jam"}, "overview": ["Watch the gameplay video for a look at the project."], "video": "https://www.youtube.com/watch?v=1gI__7ob34A", "images": [{"label": "Title screen with the neon retro-desktop look", "src": "assets/b9fd52ae9bec4a80495001582c960ab8.png", "r": 1.738}, {"label": "Screenshots, UI elements and references", "src": "assets/0b6e370482e7940903c1046f60c1d197.png", "r": 3.36}, {"label": "Wallpaper and in-game desktop design", "src": "assets/a24e500509b780202f5d1b131c2d11a2.jpg", "r": 3.36}, {"label": "Level design and mechanics flow", "src": "assets/6d0b1ef43c8d5bb3c0168acce01b75b0.jpg", "r": 3.36}]}, {"id": "original-artwork", "group": "more", "type": "2D illustration", "title": "Original Artwork", "hue": 300, "subtitle": "Original character artwork.", "meta": {"Date": "Feb 2026", "Category": "Illustration"}, "overview": ["A collection of original character illustrations."], "images": [{"label": "A winged dark rider charging through ice and flowers", "src": "assets/97943aa6c00ad223e45e0918c6802aab.jpg", "r": 2.07}, {"label": "A figure in a cathedral of stained-glass light", "src": "assets/fe7bf173dbf83d5dce584071a661f2a0.jpg", "r": 2.135}]}]}</script>
+<script>
+const APP_SRC = document.currentScript.textContent;
+const TITLE = "Mengting Li Portfolio";
+const DATA = JSON.parse(document.getElementById("site-data").textContent);
+let S = JSON.parse(JSON.stringify(DATA));
+let editing = false, dirty = false, filter = "all", ART = null, ASSETS = null, saving = false;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---------- state paths ---------- */
+const get = path => path.split(".").reduce((o,k)=>o==null?undefined:o[k], S);
+function set(path, v){
+  const ks = path.split("."); let o = S;
+  ks.slice(0,-1).forEach(k=>{ if(o[k]==null) o[k] = {}; o = o[k]; });
+  o[ks[ks.length-1]] = v;
+}
+/* editable text: plain in view mode, contenteditable in edit mode */
+function E(path, tag="span", cls="", ph="Type here"){
+  const ed = editing ? ` contenteditable="plaintext-only" spellcheck="false" data-ph="${esc(ph)}"` : "";
+  return `<${tag} class="${cls}" data-k="${path}"${ed}>${esc(get(path))}</${tag}>`;
+}
+const C = (act, label, attrs="", cls="") => `<button class="ctl ${cls}" data-act="${act}" ${attrs}>${label}</button>`;
+
+/* ---------- media ---------- */
+const lbl = im => typeof im === "object" ? im.label : im;
+const ph = (p,label) => `<div class="ph" style="background:radial-gradient(ellipse at 70% 30%, hsl(${p.hue} 12% 20%), transparent 60%), linear-gradient(160deg,#1b1b1a,#101010)"><span>${esc(label)} · placeholder</span></div>`;
+const media = (p,im) => (im && typeof im === "object" && im.src) ? `<img src="${esc(im.src)}" alt="${esc(im.label||p.title)}" loading="lazy">` : ph(p, lbl(im) || "Image");
+
+/* ---------- home ---------- */
+/* a small fanned hand of cards used as the cover for card projects */
+function miniHand(p){
+  const pick = p.coverCards || [0, 1, 6, 8, 11];
+  const cards = pick.filter(n => p.deck[n]).map(n => p.deck[n]), m = (cards.length - 1) / 2;
+  return `<a class="w-img mh" href="#${p.id}" aria-label="${esc(p.title)}: open the interactive deck">
+    <div class="shot mh-table">${cards.map((c,k)=>`<span class="mh-c" style="--o:${k - m};--d:${(k*0.37).toFixed(2)}s"><span class="mh-in"><img src="${esc(c.src)}" alt="" draggable="false" loading="lazy"><span class="pc-shine"></span></span></span>`).join("")}
+    <span class="mh-tag mono">Interactive deck · ${p.deck.length} cards</span></div></a>`;
+}
+function paragraphs(path, cls=""){
+  const arr = get(path) || [];
+  return arr.map((_,j)=>E(`${path}.${j}`,"p",cls,"Paragraph")).join("") +
+    (editing ? `<div class="ctls">${C("add-par","+ Paragraph",`data-k="${path}"`,"add")}</div>` : "");
+}
+function projCtls(i){
+  const p = S.projects[i];
+  return `<div class="ctls">${C("up","↑",`data-i="${i}"`)}${C("down","↓",`data-i="${i}"`)}
+    ${p.group==="work" ? C("type",`Type: ${esc(p.type)}`,`data-i="${i}"`) : ""}
+    ${p.group==="work" ? TAGS.map(t=>C("tag",`${(p.tags||[]).includes(t)?"✓ ":"+ "}${esc(t)}`,`data-i="${i}" data-t="${esc(t)}"`,(p.tags||[]).includes(t)?"on":"")).join("") : ""}
+    ${C("move", p.group==="work" ? "Move to More" : "Move to Work", `data-i="${i}"`)}
+    ${C("del","Delete",`data-i="${i}"`,"warn")}</div>`;
+}
+const THEMES = {"":"Neutral", noir:"Noir red", parchment:"Parchment & gold", hearth:"Warm hearth", abyss:"Bioluminescent"};
+const TAGS = ["Concept Art","Texture Art","3D Environment","Illustration"];
+const pad2 = n => String(n).padStart(2,"0");
+/* torn paper edge: a jagged clip-path, stable per seed */
+function tear(seed, depth=7){
+  let x = seed * 9301 + 49297; const rnd = () => (x = (x * 9301 + 49297) % 233280) / 233280;
+  const top = [], bot = [];
+  for(let p=0; p<=100; p+= 1.2 + rnd()*2.6){ top.push(`${p.toFixed(1)}% ${(rnd()*depth).toFixed(1)}px`); }
+  top.push(`100% ${(rnd()*depth).toFixed(1)}px`);
+  for(let p=100; p>=0; p-= 1.2 + rnd()*2.6){ bot.push(`${p.toFixed(1)}% calc(100% - ${(rnd()*depth).toFixed(1)}px)`); }
+  bot.push(`0% calc(100% - ${(rnd()*depth).toFixed(1)}px)`);
+  return `clip-path:polygon(${top.join(",")},${bot.join(",")})`;
+}
+function nav(){
+  const P = S.profile;
+  return `<nav class="nav"><div class="in">
+    <a class="nm" href="#top">${esc(P.name)}</a>
+    <ul class="mono"><li><a href="#works">Work</a></li><li><a href="#games">Games</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
+    <span class="mono dot">Open to work</span>
+    <span class="nav-tools">${editing ? "" : `<span class="lang-seg mono" role="group" aria-label="Language"><button data-lang="en">EN</button><button data-lang="zh">中文</button><button data-lang="da">DA</button></span>`}<button class="thm-btn" aria-label="Light mode"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button></span>
+  </div></nav>`;
+}
+function renderHome(){
+  const P = S.profile;
+  const work = S.projects.map((p,i)=>({p,i})).filter(x=>x.p.group==="work");
+  const more = S.projects.map((p,i)=>({p,i})).filter(x=>x.p.group==="more");
+  const shown = work.filter(x=>filter==="all"||x.p.type===filter);
+  const rows = shown.map(({p,i})=>{
+    const no = work.findIndex(x=>x.i===i) + 1;
+    const facts = [p.meta.Timeframe, p.meta.Engine || p.meta.Tools].filter(Boolean);
+    return `<article class="w-row">
+      <div class="w-txt">
+        <div class="file mono">${E(`projects.${i}.kind`,"span")}${E(`projects.${i}.meta.Year`,"span","","Year")}</div>
+        ${editing ? E(`projects.${i}.title`,"h3") : `<h3><a href="#${p.id}">${esc(p.title)}</a></h3>`}
+        ${E(`projects.${i}.subtitle`,"p","sub")}
+        ${!editing && (p.tags||[]).length ? `<div class="tags" aria-label="Disciplines">${p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>` : ""}
+        ${!editing && facts.length ? `<div class="facts mono">${facts.map(f=>`<span>${esc(f)}</span>`).join("")}</div>` : ""}
+        <a class="go" href="#${p.id}">${editing?"Open to edit details":"View project"} <span>→</span></a>
+        ${editing ? projCtls(i) : ""}
+      </div>
+      <div class="frame">
+        ${p.deck && p.deck.length ? miniHand(p) : `<a class="w-img" href="#${p.id}" aria-label="${esc(p.title)}"><div class="shot">${media(p,p.images[0])}</div></a>`}</div>
+    </article>`;}).join("");
+  const list = more.map(({p,i})=> editing ? `
+    <div class="t-row">${E(`projects.${i}.meta.Date`,"span","mono muted")}
+      <span>${E(`projects.${i}.title`,"b")}${E(`projects.${i}.subtitle`,"span","d")}${projCtls(i)}</span>
+      <span class="r mono">${E(`projects.${i}.type`)}<br><a href="#${p.id}">Open →</a></span></div>`
+    : `<a class="t-row" href="#${p.id}" data-pi="${i}"><span class="mono muted">${esc(p.meta.Date||"")}</span>
+      <span><b>${esc(p.title)}</b><span class="d">${esc(p.subtitle)}</span></span><span class="r mono">${esc(p.type)} →</span></a>`).join("");
+  const edu = P.education.map((e,j)=>`
+    <div class="t-row">${E(`profile.education.${j}.years`,"span","mono muted")}
+      <span>${E(`profile.education.${j}.school`,"b")}${E(`profile.education.${j}.program`,"span","d")}
+      ${editing?`<div class="ctls">${C("del-edu","Remove",`data-j="${j}"`,"warn")}</div>`:""}</span>
+      ${E(`profile.education.${j}.place`,"span","r mono")}</div>`).join("");
+  const links = P.links.map((l,j)=> editing
+    ? `<span class="lk">${E(`profile.links.${j}.label`,"span","","Label")}${E(`profile.links.${j}.url`,"small","","https://…")}<span>${C("del-link","Remove",`data-j="${j}"`,"warn")}</span></span>`
+    : `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("");
+  const chips = editing ? `<p>${E("profile.proficiency")}</p>`
+    : `<div class="chips">${String(P.proficiency||"").split(",").map(s=>s.trim()).filter(Boolean).map(s=>`<span>${esc(s)}</span>`).join("")}</div>`;
+  const kinds = [...new Set(work.map(x=>x.p.type))].sort().join(" & ");
+  $("#app").innerHTML = `${nav()}<main class="wrap" id="top">
+    <header class="hero">
+      <div class="hero-top mono">${E("profile.location","span")}</div>
+      ${E("profile.name","h1","big")}
+      <div class="hero-bot">
+        ${E("profile.tagline","p","tag")}
+        <div class="roles mono">${E("profile.roles","span","r1")}<a class="go" href="#works">View work <span>↓</span></a></div>
+      </div>
+    </header>
+    <section id="works">
+      <div class="sh"><h2>Selected work</h2>
+        <div class="filter" role="group" aria-label="Filter work">
+          ${["all","2D","3D"].map(f=>`<button data-f="${f}" aria-pressed="${filter===f}">${f==="all"?`All (${pad2(work.length)})`:f}</button>`).join("")}
+        </div></div>
+      <div class="works">${rows}</div>
+      ${editing?`<div class="ctls" style="margin-top:32px">${C("add-project","+ Add work project",`data-g="work"`,"add")}</div>`:""}
+    </section>
+    <section id="games">
+      <div class="sh"><h2>More projects</h2><span class="mono cnt">${pad2(more.length)} projects</span></div>
+      <div class="titles">${list}</div>
+      ${editing?`<div class="ctls" style="margin-top:16px">${C("add-project","+ Add project",`data-g="more"`,"add")}</div>`:""}
+    </section>
+    <section id="about">
+      <div class="sh"><h2>About</h2></div>
+      <div class="about">
+        <div class="clip">${(P.about||[]).length ? E("profile.about.0","p","lead","Opening statement") : ""}<span class="mono muted by">— ${esc(P.name)}</span></div>
+        <div class="rt">
+          ${(P.about||[]).slice(1).map((_,j)=>E(`profile.about.${j+1}`,"p","","Paragraph")).join("")}
+          ${editing?`<div class="ctls">${C("add-par","+ Paragraph",`data-k="profile.about"`,"add")}</div>`:""}
+          <div class="edu">${edu}</div>
+          ${editing?`<div class="ctls">${C("add-edu","+ Education","","add")}</div>`:""}
+          <span class="mono muted" style="margin-top:12px">Proficiency</span>
+          ${chips}
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="notice">
+        ${E("profile.contactKicker","span","k")}
+        ${E("profile.contactTitle","h2")}
+        ${E("profile.contactText","p","ct")}
+        ${P.email || editing ? `<div class="mail">${E("profile.email","span","mail-addr","you@email.com")}${editing ? "" : `<button class="btn" id="copyMail">Copy email</button>`}</div>` : ""}
+        <div class="c-links">${links}</div>
+        ${editing?`<div class="ctls" style="margin-top:12px;justify-content:center">${C("add-link","+ Link","","add")}</div>`:""}
+        ${E("profile.thanks","p","thanks")}
+      </div>
+    </section>
+    <footer class="mono"><span>© 2026 ${esc(P.name)}</span><a href="#top" style="text-decoration:none">Back to top ↑</a></footer>
+  </main>`;
+}
+
+/* ---------- detail ---------- */
+function renderDetail(i){
+  const p = S.projects[i], k = `projects.${i}`;
+  const list = S.projects.filter(x=>x.group===p.group);
+  const pos = list.indexOf(p), nx = list[(pos+1) % list.length];
+  const body = [
+    ["Overview", paragraphs(`${k}.overview`), "first"],
+    (p.process?.length || editing) && ["Process", paragraphs(`${k}.process`)],
+    (p.tools || editing) && ["Software", E(`${k}.tools`,"p","","Tools used")],
+    editing ? ["Video", `<div class="field">YouTube URL: ${E(`${k}.video`,"span","","https://youtube.com/…")}</div>`]
+            : p.video && ["Video", `<p><a class="btn" href="${esc(p.video)}" target="_blank" rel="noopener">Watch on YouTube <span>↗</span></a></p>`],
+  ].filter(Boolean).map(([h,c,x])=>`<h2 class="mono">${h}</h2><div class="txt ${x||""}">${c}</div>`).join("");
+  const ratioOf = im => (im && typeof im === "object" && im.r) || 0;
+  const fitCls = r => !r ? "" : r >= 1.55 ? "wide" : r < 0.9 ? "tall" : "";
+  const rStyle = im => ratioOf(im) ? ` style="--r:${ratioOf(im)}"` : "";
+  const galStart = p.deck && p.deck.length ? 0 : 1;
+  const capOf = j => { const im = p.images[j]; return !editing && im && typeof im === "object" && im.src && im.label ? `<p class="cap">${esc(im.label)}</p>` : ""; };
+  const imgCtls = j => editing ? `<div class="ctls">
+      ${E(`${k}.images.${j}${typeof p.images[j]==="object"?".label":""}`,"span","mono muted","Caption")}
+      ${C("img-replace","Replace",`data-i="${i}" data-j="${j}"`)}
+      ${j>0?C("img-cover","Make cover",`data-i="${i}" data-j="${j}"`):""}
+      ${C("img-del","Remove",`data-i="${i}" data-j="${j}"`,"warn")}</div>` : "";
+  const shot = j => editing ? `<div class="shot">${media(p,p.images[j])}</div>`
+    : `<button class="zoom" data-zoom="${j}" aria-label="Open ${esc(lbl(p.images[j]))}"><div class="shot">${media(p,p.images[j])}</div></button>`;
+  $("#app").innerHTML = `${nav()}<main class="wrap" id="top">
+    <div class="d-top mono"><a class="back" href="#${p.group==="work"?"works":"games"}">← All projects</a><span class="muted">No. ${pad2(pos+1)} / ${pad2(list.length)}</span></div>
+    <header class="d-head">
+      <div class="file mono">${E(`${k}.${p.group==="work"?"kind":"type"}`,"span")}<span>${esc(p.meta.Year||p.meta.Date||"")}</span></div>
+      ${E(`${k}.title`,"h1")}
+      ${E(`${k}.subtitle`,"p","subtitle")}
+    </header>
+    ${p.deck && p.deck.length ? deckHTML(p) + quizHTML() : p.images.length ? `<div class="hero-shot" data-j="0"${rStyle(p.images[0])}>${shot(0)}${imgCtls(0)}</div>${capOf(0)}` : ""}
+    <dl class="meta">${Object.keys(p.meta).filter(m=>editing||String(p.meta[m]||"").trim()).map(m=>`<div><dt class="mono">${esc(m)}</dt>${E(`${k}.meta.${m}`,"dd","","—")}</div>`).join("")}</dl>
+    ${p.play && p.play.url ? `<a class="btn play" href="${esc(p.play.url)}" target="_blank" rel="noopener">${esc(p.play.label||"Play the game")} ↗</a>` : ""}
+    <div class="d-body">${body}</div>
+    ${p.deck && p.deck.length && !editing ? filmHTML(p) + compareHTML(p) : p.images.length>galStart ? `<div class="gal">${p.images.slice(galStart).map((im,n)=>{ const j = n + galStart;
+      return `${im && im.section ? `<div class="gh mono"><b>${esc(im.section)}</b>${im.note?`<span>${esc(im.note)}</span>`:""}</div>` : ""}${im && im.yt && !editing ? `<a class="it ytc" href="${esc(im.yt)}" target="_blank" rel="noopener"${rStyle(im)}><span class="ytt"><img src="${esc(im.src)}" alt="" loading="lazy"><span class="ytp" aria-hidden="true"></span></span><span class="cap">${esc(lbl(im))} ↗</span></a>` : `<div class="it ${fitCls(ratioOf(im))}" data-j="${j}"${rStyle(im)}>${shot(j)}${capOf(j)}${imgCtls(j)}</div>`}`; }).join("")}</div>` : ""}
+    ${(p.clips||[]).length || editing ? `<div class="vclips">${!editing ? `<div class="gh mono"><b>Gameplay</b><span>Footage from the current build</span></div>` : ""}${(p.clips||[]).map((c,n)=>`<div class="vclip">
+      <video src="${esc(c.src)}" controls playsinline preload="metadata"></video>
+      <div class="ctls">${E(`${k}.clips.${n}.label`,"span","mono muted","Caption")}${editing?C("vid-del","Remove video",`data-i="${i}" data-j="${n}"`,"warn"):""}</div>
+    </div>`).join("")}${editing && ASSETS ? `<div class="ctls">${C("vid-add","+ Upload video",`data-i="${i}"`,"add")}</div>` : ""}</div>` : ""}
+    ${editing ? `<div class="ctls" style="margin-top:16px">${ASSETS?C("img-add","+ Upload images",`data-i="${i}"`,"add"):""}${C("img-ph","+ Empty image slot",`data-i="${i}"`,"add")}</div>` : ""}
+    <a class="next" href="#${nx.id}"><span class="mono muted">Next project →</span><b>${esc(nx.title)}</b></a>
+    <footer class="mono"><span>© 2026 ${esc(S.profile.name)}</span><a href="#top" style="text-decoration:none">Back to top ↑</a></footer>
+  </main>`;
+}
+
+/* ---------- hover preview for the archive list ---------- */
+const finePointer = matchMedia("(hover:hover) and (pointer:fine)").matches;
+let prevIdx = -1;
+document.addEventListener("pointermove", e=>{
+  if(!finePointer || editing) return;
+  const row = e.target.closest && e.target.closest("a.t-row[data-pi]");
+  const pv = $("#prev");
+  if(!row){ if(!pv.hidden){ pv.hidden = true; prevIdx = -1; } return; }
+  const i = +row.dataset.pi;
+  if(i !== prevIdx){ const p = S.projects[i]; pv.innerHTML = `<div class="shot">${media(p,p.images[0])}</div>`; prevIdx = i; }
+  pv.hidden = false;
+  const x = Math.min(e.clientX + 28, innerWidth - 290), y = Math.min(Math.max(e.clientY - 100, 70), innerHeight - 230);
+  pv.style.transform = `translate(${x}px,${y}px)`;
+});
+
+/* ---------- interactive card deck (Archetype Mirror) ---------- */
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let DK = null;
+function deckHTML(p){
+  return `<section class="deck" aria-label="Interactive card deck">
+    <div class="deck-head">
+      <div><span class="mono muted">Interactive deck · ${p.deck.length} cards</span>
+      <p class="deck-hint">Drag cards to rearrange your hand. Click a card to bring it up close.</p></div>
+      <div class="deck-btns"><button class="ctl" id="dkShuffle">Shuffle</button><button class="ctl" id="dkSort">Sort I–XII</button></div>
+    </div>
+    <div class="table" id="dkTable">
+      ${p.deck.map((c,n)=>`<div class="pc" data-c="${n}" tabindex="0" role="button" aria-label="${esc(c.num)} ${esc(c.name)}">
+        <div class="pc-in"><img src="${esc(c.src)}" alt="" draggable="false"><span class="pc-shine"></span></div></div>`).join("")}
+    </div>
+    <div class="deck-info" id="dkInfo" aria-live="polite"><span class="mono muted">Hover a card</span></div>
+  </section>`;
+}
+function initDeck(p){
+  if(DK) cancelAnimationFrame(DK.raf);
+  const table = $("#dkTable"); if(!table) return;
+  const els = [...table.querySelectorAll(".pc")];
+  DK = {p, table, order: els.map((_,n)=>n), sel: new Set(), hover: -1, drag: null, raf: 0,
+    cards: els.map((el,n)=>({el, inner: el.querySelector(".pc-in"), shine: el.querySelector(".pc-shine"),
+      x: 0, y: 0, r: 0, s: 1, tx: 0, ty: 0, tr: 0, ts: 1, rx: 0, ry: 0, trx: 0, try_: 0, vr: 0, ph: n*1.7, born: false}))};
+  const info = c => { const d = p.deck[c];
+    $("#dkInfo").innerHTML = `<span class="mono">${esc(d.num)}</span><b>${esc(d.name)}</b><span class="cn">${esc(d.cn)}</span><span class="muted">${esc(d.motto)}</span>`; };
+  function layout(){
+    const W = table.clientWidth, cw = els[0].offsetWidth, ch = els[0].offsetHeight, n = DK.order.length;
+    const step = Math.min(cw * 0.86, (W - cw * 1.6) / Math.max(1, n - 1));
+    const ang = Math.min(3.4, 36 / n);
+    DK.order.forEach((c, k) => {
+      const o = k - (n - 1) / 2, C = DK.cards[c];
+      C.tx = W/2 - cw/2 + o * step;
+      C.ty = table.clientHeight - ch - 72 + Math.pow(Math.abs(o), 2) * 1.2 - (DK.sel.has(c) ? 46 : 0) - (DK.hover === c ? 22 : 0);
+      C.tr = o * ang; C.ts = DK.hover === c ? 1.1 : 1;
+      C.slot = C.tx;
+      if(!C.born){ C.x = W/2 - cw/2; C.y = table.clientHeight + 40; C.r = 0; C.born = true; }
+    });
+  }
+  DK.layout = layout;
+  function frame(t){
+    if(!table.isConnected){ DK = null; return; }
+    layout();
+    const k = reduceMotion ? 1 : 0.16;
+    DK.order.forEach((c, z) => {
+      const C = DK.cards[c], dragging = DK.drag && DK.drag.c === c && DK.drag.moved;
+      if(!dragging){
+        C.x += (C.tx - C.x) * k; C.y += (C.ty - C.y) * k;
+        C.r += (C.tr - C.r) * k; C.vr *= 0.85;
+      }
+      C.s += (C.ts - C.s) * (reduceMotion ? 1 : 0.2);
+      C.rx += (C.trx - C.rx) * 0.15; C.ry += (C.try_ - C.ry) * 0.15;
+      const bob = reduceMotion || dragging ? 0 : Math.sin(t/900 + C.ph) * 2.2;
+      const sway = reduceMotion || dragging ? 0 : Math.sin(t/1300 + C.ph) * 0.9;
+      C.el.style.transform = `translate(${C.x}px,${C.y + bob}px) rotate(${C.r + C.vr + sway}deg)`;
+      C.el.style.zIndex = dragging ? 200 : (DK.hover === c ? 100 : z + 1);
+      C.inner.style.transform = `perspective(700px) rotateX(${C.rx}deg) rotateY(${C.ry}deg) scale(${dragging ? 1.12 : C.s})`;
+      C.el.classList.toggle("lift", dragging || DK.hover === c || DK.sel.has(c));
+    });
+    DK.raf = requestAnimationFrame(frame);
+  }
+  els.forEach((el, c) => {
+    const C = DK.cards[c];
+    el.addEventListener("pointerenter", () => { if(!DK.drag){ DK.hover = c; info(c); } });
+    el.addEventListener("pointerleave", () => { if(DK.hover === c && !DK.drag) DK.hover = -1; C.trx = C.try_ = 0; });
+    el.addEventListener("pointermove", e => {
+      if(reduceMotion || (DK.drag && DK.drag.moved)) return;
+      const r = C.inner.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      C.trx = (0.5 - py) * 22; C.try_ = (px - 0.5) * 26;
+      C.shine.style.setProperty("--mx", (px*100) + "%"); C.shine.style.setProperty("--my", (py*100) + "%");
+    });
+    el.addEventListener("pointerdown", e => {
+      if(e.button > 0) return;
+      el.setPointerCapture(e.pointerId);
+      const tr = table.getBoundingClientRect();
+      DK.drag = {c, id: e.pointerId, ox: e.clientX - tr.left - C.x, oy: e.clientY - tr.top - C.y, sx: e.clientX, sy: e.clientY, lx: e.clientX, moved: false};
+    });
+    el.addEventListener("pointermove", e => {
+      const D = DK.drag; if(!D || D.c !== c || D.id !== e.pointerId) return;
+      if(!D.moved && Math.hypot(e.clientX - D.sx, e.clientY - D.sy) > 6){ D.moved = true; DK.hover = c; C.trx = C.try_ = 0; }
+      if(!D.moved) return;
+      const tr = table.getBoundingClientRect();
+      C.x = e.clientX - tr.left - D.ox; C.y = e.clientY - tr.top - D.oy;
+      const vx = e.clientX - D.lx; D.lx = e.clientX;
+      C.r += (Math.max(-28, Math.min(28, vx * 1.6)) - C.r) * 0.25;
+      /* live reorder: slot by horizontal position among the other cards */
+      const others = DK.order.filter(o => o !== c);
+      let idx = others.findIndex(o => DK.cards[o].slot + els[0].offsetWidth/2 > C.x + els[0].offsetWidth/2);
+      if(idx < 0) idx = others.length;
+      others.splice(idx, 0, c);
+      if(others.join() !== DK.order.join()) DK.order = others;
+    });
+    const end = e => {
+      const D = DK && DK.drag; if(!D || D.c !== c) return;
+      DK.drag = null;
+      if(!D.moved){ info(c); openCard(c); }
+      if(!el.matches(":hover")) DK.hover = -1;
+    };
+    el.addEventListener("pointerup", end);
+    el.addEventListener("pointercancel", end);
+    el.addEventListener("keydown", e => { if(e.key === "Enter" || e.key === " "){ e.preventDefault(); openCard(c); } });
+    el.addEventListener("focus", () => { DK.hover = c; info(c); });
+    el.addEventListener("blur", () => { if(DK && DK.hover === c) DK.hover = -1; });
+  });
+  /* ---- close-up: the card flies from the hand to the camera ---- */
+  let F = null;
+  function targetRect(){
+    const vw = innerWidth, vh = innerHeight, ratio = 375/554;
+    const h = Math.min(vh * 0.68, (vw - 48) / ratio, 760), w = h * ratio;
+    return {x: (vw - w)/2, y: Math.max(16, (vh - h)/2 - 46), w, h};
+  }
+  function openCard(c){
+    if(F) return;
+    const d = p.deck[c], src = DK.cards[c].el, r0 = src.getBoundingClientRect();
+    const T = targetRect();
+    const wrap = document.createElement("div"); wrap.className = "cf"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-modal","true"); wrap.setAttribute("aria-label", d.name);
+    wrap.innerHTML = `<div class="cf-bg"></div>
+      <div class="cf-card" style="width:${T.w}px;height:${T.h}px"><div class="pc-in"><img src="${esc(d.src)}" alt="${esc(d.name)}" draggable="false"><span class="pc-shine"></span></div></div>
+      <div class="cf-ui"><div class="cf-name"><span class="mono">${esc(d.num)}</span><b>${esc(d.name)}</b><span class="cn">${esc(d.cn)}</span></div>
+      <p class="cf-motto">${esc(d.motto)}</p>
+      <div class="cf-btns"><button data-cf="prev" aria-label="Previous card">←</button><button data-cf="close">Back to hand · Esc</button><button data-cf="next" aria-label="Next card">→</button></div></div>`;
+    document.body.appendChild(wrap);
+    document.documentElement.style.overflow = "hidden";
+    const card = wrap.querySelector(".cf-card"), inner = card.querySelector(".pc-in"), shine = card.querySelector(".pc-shine");
+    /* start from the hand card's on-screen box (bounding box of the rotated card ~ its centre and size) */
+    const C = DK.cards[c], cw = src.offsetWidth, ch = src.offsetHeight;
+    const cx0 = r0.left + r0.width/2, cy0 = r0.top + r0.height/2;
+    F = {c, wrap, card, inner, shine, x: cx0 - cw/2, y: cy0 - ch/2, s: cw / T.w, r: C.r, rx: 0, ry: 0, trx: 0, try_: 0, flip: 0, T, closing: false, raf: 0};
+    src.style.visibility = "hidden";
+    requestAnimationFrame(() => wrap.classList.add("on"));
+    const step = t => {
+      if(!F) return;
+      const T = F.T, k = reduceMotion ? 1 : 0.14;
+      let tx = T.x, ty = T.y, ts = 1, tr = 0, tf = 0;
+      if(F.closing){
+        const r = DK.cards[F.c].el.getBoundingClientRect(), w = DK.cards[F.c].el.offsetWidth, h = DK.cards[F.c].el.offsetHeight;
+        tx = r.left + r.width/2 - w/2; ty = r.top + r.height/2 - h/2; ts = w / T.w; tr = DK.cards[F.c].r; tf = 0;
+      }
+      F.x += (tx - F.x) * k; F.y += (ty - F.y) * k; F.s += (ts - F.s) * k; F.r += (tr - F.r) * k;
+      F.flip += (tf - F.flip) * (reduceMotion ? 1 : 0.12);
+      F.rx += (F.trx - F.rx) * 0.12; F.ry += (F.try_ - F.ry) * 0.12;
+      const bob = F.closing || reduceMotion ? 0 : Math.sin(t/1100) * 6;
+      card.style.transform = `translate(${F.x}px,${F.y + bob}px) scale(${F.s}) rotate(${F.r}deg)`;
+      inner.style.transform = `perspective(1400px) rotateX(${F.rx}deg) rotateY(${F.ry + F.flip}deg)`;
+      if(F.closing && Math.abs(F.x - tx) < 1.5 && Math.abs(F.y - ty) < 1.5 && Math.abs(F.s - ts) < 0.01){ finishClose(); return; }
+      F.raf = requestAnimationFrame(step);
+    };
+    F.raf = requestAnimationFrame(step);
+    card.addEventListener("pointermove", e => {
+      if(reduceMotion || F.closing) return;
+      const r = card.getBoundingClientRect(), px = (e.clientX - r.left)/r.width, py = (e.clientY - r.top)/r.height;
+      F.trx = (0.5 - py) * 18; F.try_ = (px - 0.5) * 22;
+      shine.style.setProperty("--mx", px*100 + "%"); shine.style.setProperty("--my", py*100 + "%");
+    });
+    card.addEventListener("pointerleave", () => { F.trx = F.try_ = 0; });
+    card.addEventListener("click", closeCard);
+    wrap.querySelector(".cf-bg").addEventListener("click", closeCard);
+    wrap.querySelector(".cf-btns").addEventListener("click", e => {
+      const b = e.target.closest("[data-cf]"); if(!b) return;
+      if(b.dataset.cf === "close") closeCard(); else swapCard(b.dataset.cf === "next" ? 1 : -1);
+    });
+    wrap.querySelector('[data-cf="close"]').focus();
+  }
+  function swapCard(dir){
+    if(!F || F.closing) return;
+    const k = DK.order.indexOf(F.c), n = DK.order.length, c = DK.order[(k + dir + n) % n], d = p.deck[c];
+    DK.cards[F.c].el.style.visibility = ""; DK.cards[c].el.style.visibility = "hidden";
+    F.c = c; info(c);
+    F.flip = reduceMotion ? 0 : dir * 85;   /* turns in edge-first toward the new face */
+    const img = F.card.querySelector("img"); img.src = d.src; img.alt = d.name;
+    F.wrap.querySelector(".cf-name").innerHTML = `<span class="mono">${esc(d.num)}</span><b>${esc(d.name)}</b><span class="cn">${esc(d.cn)}</span>`;
+    F.wrap.querySelector(".cf-motto").textContent = d.motto;
+    F.wrap.setAttribute("aria-label", d.name);
+  }
+  function closeCard(){
+    if(!F || F.closing) return;
+    F.closing = true; F.trx = F.try_ = 0; F.wrap.classList.remove("on");
+    if(reduceMotion) finishClose();
+  }
+  function finishClose(){
+    if(!F) return;
+    cancelAnimationFrame(F.raf);
+    DK.cards[F.c].el.style.visibility = "";
+    const el = DK.cards[F.c].el;
+    F.wrap.remove(); F = null;
+    document.documentElement.style.overflow = "";
+    el.focus({preventScroll:true});
+  }
+  DK.keys = e => {
+    if(!F) return;
+    if(e.key === "Escape") closeCard();
+    else if(e.key === "ArrowRight") swapCard(1);
+    else if(e.key === "ArrowLeft") swapCard(-1);
+    else return;
+    e.preventDefault();
+  };
+  DK.resize = () => { if(F) F.T = targetRect(); };
+  DK.open = c => { info(c); openCard(c); };
+  $("#dkShuffle").onclick = () => {
+    const o = DK.order.slice();
+    for(let i = o.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [o[i], o[j]] = [o[j], o[i]]; }
+    DK.order = o; DK.order.forEach((c,k) => { if(!reduceMotion) DK.cards[c].vr = (Math.random() - .5) * 40; DK.cards[c].y -= 60 + k*4; });
+  };
+  $("#dkSort").onclick = () => { DK.order = DK.cards.map((_,n)=>n); };
+  layout();
+  DK.raf = requestAnimationFrame(frame);
+}
+addEventListener("keydown", e => { if(DK && DK.keys) DK.keys(e); });
+addEventListener("resize", () => { if(DK && DK.resize) DK.resize(); });
+
+/* ---------- "Which card are you?" quiz ---------- */
+/* card index follows the deck order I–XII:
+   0 Magician 1 Jester 2 Ruler 3 Caregiver 4 Creator 5 Explorer 6 Hero 7 Sage 8 Innocent 9 Everyman 10 Outlaw 11 Lover */
+const QUIZ = [
+  {q:"A free Saturday with no plans. You…", a:[
+    ["Head somewhere you've never been", {5:2, 10:1}],
+    ["Make something: draw, cook, build", {4:2, 0:1}],
+    ["Message friends to see what everyone's up to", {9:2, 11:1}],
+    ["Go deep into a book or a new topic", {7:2, 0:1}]]},
+  {q:"In a group project, you naturally…", a:[
+    ["Take charge and set the plan", {2:2, 6:1}],
+    ["Check that everyone is doing okay", {3:2, 9:1}],
+    ["Keep the mood light", {1:2, 11:1}],
+    ["Question the brief and try another way", {10:2, 4:1}]]},
+  {q:"What would bother you most?", a:[
+    ["Being weak when it really matters", {6:2, 2:1}],
+    ["Being stuck somewhere boring", {5:2, 1:1}],
+    ["Being lied to", {7:2, 8:1}],
+    ["Being alone", {11:2, 9:1}]]},
+  {q:"Pick a door.", a:[
+    ["A garden in morning sun", {8:2, 3:1}],
+    ["A stage behind a red curtain", {1:2, 0:1}],
+    ["A hall with a throne at the end", {2:2, 6:1}],
+    ["A forest path at night", {10:2, 5:1}]]},
+  {q:"Friends usually come to you for…", a:[
+    ["Advice", {7:2, 3:1}],
+    ["Comfort", {3:2, 11:1}],
+    ["A laugh", {1:2, 9:1}],
+    ["The push to do the scary thing", {6:2, 10:1}]]},
+  {q:"Which word would you most like to be remembered by?", a:[
+    ["Kind", {8:2, 3:1}],
+    ["Brilliant", {0:2, 7:1}],
+    ["Brave", {6:2, 5:1}],
+    ["Original", {4:2, 10:1}]]},
+  {q:"A rule makes no sense to you. You…", a:[
+    ["Follow it. There's probably a reason", {8:2, 9:1}],
+    ["Rewrite it so it works properly", {2:2, 7:1}],
+    ["Ignore it", {10:2, 1:1}],
+    ["Find a clever way around it", {0:2, 4:1}]]},
+  {q:"The best reward would be…", a:[
+    ["A deep bond with someone", {11:2, 3:1}],
+    ["A place where everyone belongs", {9:2, 8:1}],
+    ["Seeing your idea become real", {4:2, 0:1}],
+    ["Freedom to go anywhere", {5:2, 10:1}]]},
+];
+const QUIZ_TEXT = [
+  "You see how things could be and quietly make them so. People find you a little mysterious, and that suits you.",
+  "You bring light into heavy rooms. Under the jokes is a sharp eye for what everyone else takes too seriously.",
+  "You make order out of chaos. People feel safer when you're the one holding the map.",
+  "You notice who needs help before they ask, and you give care without keeping score.",
+  "You think with your hands. A blank page isn't empty to you, it's an invitation.",
+  "You trust the road more than the destination. Staying still too long feels like losing yourself.",
+  "You step forward when others step back. Hard things are where you find out who you are.",
+  "You would rather understand than win. Good questions are your favourite kind of treasure.",
+  "You believe the good in the world is real, and you help other people believe it too.",
+  "You make people feel they belong. Honest, steady and easy to trust.",
+  "You question the rules everyone else accepts. Change often starts with someone like you.",
+  "You lead with the heart. Beauty, closeness and feeling are what make life worth living.",
+];
+function quizHTML(){
+  return `<section class="quiz" id="quiz" aria-label="Archetype quiz">
+    <div class="quiz-head"><span class="mono muted">Mini game</span><h2>Which card are you?</h2>
+      <p class="muted">Eight quick questions. Answer on instinct and draw the archetype that matches you.</p></div>
+    <div class="quiz-box" id="qzBox"></div>
+  </section>`;
+}
+function initQuiz(p){
+  const box = $("#qzBox"); if(!box) return;
+  let step = 0, picks = [];
+  const tally = () => {
+    const sc = new Array(p.deck.length).fill(0);
+    picks.forEach((a, i) => Object.entries(QUIZ[i].a[a][1]).forEach(([c, v]) => sc[c] += v));
+    return sc;
+  };
+  function intro(){
+    box.innerHTML = `<div class="qz-intro">
+      <div class="qz-backs">${[0,1,2].map(k=>`<span class="qz-back" style="--k:${k}"></span>`).join("")}</div>
+      <button class="btn" id="qzStart">Start the reading</button></div>`;
+    $("#qzStart").onclick = () => { step = 0; picks = []; ask(); };
+  }
+  function ask(){
+    const Q = QUIZ[step];
+    box.innerHTML = `<div class="qz-q">
+      <div class="qz-top mono"><span>Question ${step+1} / ${QUIZ.length}</span>
+        ${step ? `<button class="qz-link" id="qzBack">← Back</button>` : ""}</div>
+      <div class="qz-bar"><span style="width:${(step/QUIZ.length)*100}%"></span></div>
+      <h3>${esc(Q.q)}</h3>
+      <div class="qz-opts">${Q.a.map((a,i)=>`<button class="qz-opt" data-a="${i}"><span class="mono">${"ABCD"[i]}</span>${esc(a[0])}</button>`).join("")}</div>
+    </div>`;
+    box.querySelectorAll(".qz-opt").forEach(b => b.onclick = () => {
+      picks[step] = +b.dataset.a; step++;
+      step < QUIZ.length ? ask() : result();
+    });
+    const back = $("#qzBack"); if(back) back.onclick = () => { step--; picks.length = step; ask(); };
+    box.querySelector(".qz-opt").focus({preventScroll:true});
+  }
+  function result(){
+    const sc = tally();
+    /* ties go to the card favoured by the most recent answers */
+    const rank = sc.map((v,c)=>c).sort((a,b) => sc[b]-sc[a] || lastHit(b)-lastHit(a));
+    function lastHit(c){ for(let i = picks.length-1; i >= 0; i--) if(QUIZ[i].a[picks[i]][1][c]) return i; return -1; }
+    const c = rank[0], d = p.deck[c], also = rank.slice(1,3).map(x=>p.deck[x].name).join(" and ");
+    box.innerHTML = `<div class="qz-res">
+      <button class="qz-card" id="qzCard" aria-label="See ${esc(d.name)} up close"><span class="qz-flip"><img src="${esc(d.src)}" alt="${esc(d.name)}" draggable="false"><span class="qz-cb"></span></span></button>
+      <div class="qz-txt">
+        <span class="mono muted">You drew</span>
+        <h3><span class="mono">${esc(d.num)}</span> ${esc(d.name)} <span class="cn">${esc(d.cn)}</span></h3>
+        <p class="qz-motto">${esc(d.motto)}</p>
+        <p>${esc(QUIZ_TEXT[c])}</p>
+        <p class="muted">Also strong in you: ${esc(also)}.</p>
+        <div class="qz-acts"><button class="btn" id="qzClose">See your card up close</button><button class="ctl" id="qzAgain">Take it again</button></div>
+      </div></div>`;
+    const open = () => { if(DK && DK.open) DK.open(c); };
+    $("#qzCard").onclick = open; $("#qzClose").onclick = open;
+    $("#qzAgain").onclick = () => { step = 0; picks = []; ask(); };
+    requestAnimationFrame(() => box.querySelector(".qz-res").classList.add("on"));
+  }
+  intro();
+}
+
+/* ---------- printed deck: film strip + screen-to-print comparison ---------- */
+function filmHTML(p){
+  const imgs = p.images.filter(im => im && im.src);
+  if(!imgs.length) return "";
+  return `<section class="film-sec">
+    <div class="film-head"><div><span class="mono muted">Printed deck</span><h2>The cards in hand</h2></div>
+      <div class="film-ctl"><span class="mono muted" id="filmCount">1 / ${imgs.length}</span>
+      <button class="film-btn" id="filmPrev" aria-label="Previous photos">←</button><button class="film-btn" id="filmNext" aria-label="Next photos">→</button></div></div>
+    <div class="film" id="film" tabindex="0" aria-label="Photos of the printed deck. Drag or scroll sideways.">
+      ${p.images.map((im,j)=> im && im.src ? `<button class="fi" data-zoom="${j}" style="--r:${im.r||0.75}" aria-label="Open ${esc(im.label)}"><img src="${esc(im.src)}" alt="${esc(im.label)}" draggable="false" loading="lazy"><span class="fcap">${esc(im.label)}</span></button>` : "").join("")}
+    </div>
+    <div class="film-bar"><span id="filmBar"></span></div>
+  </section>`;
+}
+function compareHTML(p){
+  if(!p.compare || !p.compare.length) return "";
+  return `<section class="cmp-sec">
+    <div class="film-head"><div><span class="mono muted">From screen to print</span><h2>Design and the printed card</h2></div></div>
+    <div class="cmp">${p.compare.map(c=>{ const cs = c.cards.map(n=>p.deck[n]).filter(Boolean);
+      return `<article class="cmp-row${cs.length>1?" two":""}">
+        <div class="cmp-col"><span class="mono muted">Digital file</span><div class="cmp-cards n${cs.length}">${cs.map(d=>`<img src="${esc(d.src)}" alt="${esc(d.name)} artwork" loading="lazy">`).join("")}</div></div>
+        <div class="cmp-col"><span class="mono muted">Printed</span><div class="cmp-photo" style="--r:${c.r||1}"><img src="${esc(c.photo)}" alt="Printed ${esc(cs.map(d=>d.name).join(" and "))}" loading="lazy"></div></div>
+        <div class="cmp-cap"><b>${esc(cs.map(d=>d.num+" "+d.name.replace(/^The /,"")).join(" · "))}</b><span class="muted">${esc(c.note||"")}</span></div>
+      </article>`; }).join("")}</div>
+  </section>`;
+}
+function initFilm(){
+  const f = $("#film"); if(!f) return;
+  const items = [...f.querySelectorAll(".fi")];
+  const upd = () => {
+    const max = f.scrollWidth - f.clientWidth, t = max > 0 ? f.scrollLeft / max : 0;
+    $("#filmBar").style.width = (20 + t * 80) + "%";
+    let k = items.findIndex(el => el.offsetLeft + el.offsetWidth/2 >= f.scrollLeft + 1);
+    $("#filmCount").textContent = `${Math.max(0,k)+1} / ${items.length}`;
+  };
+  f.addEventListener("scroll", upd, {passive:true}); upd();
+  const by = d => f.scrollBy({left: d * f.clientWidth * 0.8, behavior: reduceMotion ? "auto" : "smooth"});
+  $("#filmPrev").onclick = () => by(-1); $("#filmNext").onclick = () => by(1);
+  f.addEventListener("keydown", e => { if(e.key==="ArrowRight"){ by(1); e.preventDefault(); } if(e.key==="ArrowLeft"){ by(-1); e.preventDefault(); } });
+  /* mouse drag to scroll; touch uses native scrolling */
+  let d = null;
+  f.addEventListener("pointerdown", e => { if(e.pointerType !== "mouse" || e.button) return; d = {x: e.clientX, s: f.scrollLeft, moved: false}; });
+  addEventListener("pointermove", e => { if(!d) return; const dx = e.clientX - d.x; if(Math.abs(dx) > 5 && !d.moved){ d.moved = true; f.classList.add("drag"); } if(d.moved) f.scrollLeft = d.s - dx; });
+  addEventListener("pointerup", () => { if(!d) return; const moved = d.moved; d = null; f.classList.remove("drag"); if(moved){ f.dataset.justDragged = "1"; setTimeout(()=>delete f.dataset.justDragged, 0); } });
+  f.addEventListener("click", e => { if(f.dataset.justDragged){ e.stopPropagation(); e.preventDefault(); } }, true);
+}
+/* pack gallery rows by each image's proportions: wide = full row, landscape = halves, portrait = thirds or quarters, no orphans */
+function layoutGallery(){
+  const gal = $(".gal"); if(!gal) return;
+  const runs = []; let cur = null;
+  [...gal.children].forEach(el => {
+    if(!el.classList.contains("it")){ cur = null; return; }
+    const r = parseFloat(el.style.getPropertyValue("--r")) || 4/3;
+    const kind = r >= 1.55 ? "wide" : r < 0.9 ? "tall" : "mid";
+    if(!cur || cur.kind !== kind){ cur = {kind, els: [], rs: []}; runs.push(cur); }
+    cur.els.push(el); cur.rs.push(r);
+  });
+  runs.forEach(({kind, els, rs}) => {
+    const n = els.length, set = (el, d, m) => { el.style.setProperty("--span", d); el.style.setProperty("--mspan", m); };
+    if(kind === "wide") return els.forEach(el => set(el, 12, 12));
+    if(kind === "mid"){
+      els.forEach(el => set(el, 6, 12));
+      if(n % 2 && rs[n-1] >= 1.15) set(els[n-1], 12, 12);
+      return;
+    }
+    /* portrait: rows of 3; a remainder of 1 becomes a row of 4, a remainder of 2 a pair */
+    els.forEach(el => set(el, 4, 6));
+    if(n === 1) set(els[0], 6, 12);
+    else if(n % 3 === 1) els.slice(0, 4).forEach(el => set(el, 3, 6));
+    else if(n % 3 === 2) els.slice(0, 2).forEach(el => set(el, 6, 6));
+  });
+}
+/* learn each image's real proportions so the gallery never crops it */
+function measureImages(p){
+  layoutGallery();
+  document.querySelectorAll(".gal .it[data-j] img, .hero-shot[data-j] img").forEach(img => {
+    const box = img.closest("[data-j]"), j = +box.dataset.j;
+    const apply = () => {
+      if(!img.naturalWidth) return;
+      const r = +(img.naturalWidth / img.naturalHeight).toFixed(3), im = p.images[j];
+      box.style.setProperty("--r", r);
+      if(box.classList.contains("it")) layoutGallery();
+      if(im && typeof im === "object" && !im.r){ im.r = r; const d = DATA.projects.find(x=>x.id===p.id); const di = d && d.images.find(x=>x && x.src===im.src); if(di && !di.r) di.r = r; }
+    };
+    img.complete ? apply() : img.addEventListener("load", apply, {once:true});
+  });
+}
+/* ---------- routing ---------- */
+function render(scrollTop){
+  $("#prev").hidden = true; prevIdx = -1;
+  const id = location.hash.slice(1);
+  const i = S.projects.findIndex(x=>x.id===id);
+  const th = i>=0 ? S.projects[i].theme : "";
+  if(th) document.body.dataset.pt = th; else delete document.body.dataset.pt;
+  if(i>=0){ renderDetail(i); measureImages(S.projects[i]); if(S.projects[i].deck){ initDeck(S.projects[i]); initQuiz(S.projects[i]); initFilm(); } if(scrollTop) scrollTo(0,0); }
+  else { renderHome(); const t = id && document.getElementById(id); if(t && scrollTop) t.scrollIntoView(); }
+  updateBar();
+}
+let lastWasDetail = false;
+addEventListener("hashchange",()=>{
+  const id = location.hash.slice(1), isDetail = S.projects.some(x=>x.id===id);
+  render(true); if(!isDetail && lastWasDetail && !document.getElementById(id)) scrollTo(0,0);
+  lastWasDetail = isDetail;
+});
+
+/* ---------- interactions ---------- */
+document.addEventListener("input", e=>{
+  const el = e.target.closest("[data-k]"); if(!el || !editing) return;
+  set(el.dataset.k, el.textContent); dirty = true; updateBar();
+});
+document.addEventListener("paste", e=>{
+  if(!e.target.closest("[contenteditable]")) return;
+  e.preventDefault(); document.execCommand("insertText", false, e.clipboardData.getData("text/plain"));
+});
+
+let pendingUpload = null, armed = null;
+document.addEventListener("click", e=>{
+  if(e.target.closest("#copyMail")){
+    const btn = e.target.closest("#copyMail"), addr = S.profile.email || "";
+    const done = t => { btn.textContent = t; setTimeout(()=>{ btn.textContent = "Copy email"; }, 1800); };
+    navigator.clipboard.writeText(addr).then(()=>done("Copied")).catch(()=>{
+      const el = document.querySelector(".mail-addr"), r = document.createRange(); r.selectNodeContents(el);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); done("Selected, press Ctrl+C");
+    });
+    return;
+  }
+  if(editing && e.target.closest("[contenteditable]") && e.target.closest("a")) { e.preventDefault(); return; }
+  const f = e.target.closest(".filter button");
+  if(f){ filter = f.dataset.f; render(false); return; }
+  const z = e.target.closest("[data-zoom]");
+  if(z){ const i = S.projects.findIndex(x=>x.id===location.hash.slice(1)); openLb(S.projects[i], +z.dataset.zoom, z); return; }
+  const b = e.target.closest("[data-act]"); if(!b) return;
+  const a = b.dataset.act, i = +b.dataset.i, j = +b.dataset.j, P = S.projects;
+  const change = () => { dirty = true; render(false); };
+  switch(a){
+    case "up": case "down": {
+      const g = P[i].group, idx = P.map((p,n)=>p.group===g?n:-1).filter(n=>n>=0), at = idx.indexOf(i);
+      const to = idx[a==="up"?at-1:at+1]; if(to==null) return;
+      [P[i],P[to]] = [P[to],P[i]]; change(); break; }
+    case "theme": { const ks = Object.keys(THEMES); P[i].theme = ks[(ks.indexOf(P[i].theme||"")+1) % ks.length] || undefined; if(!P[i].theme) delete P[i].theme; change(); break; }
+    case "type": P[i].type = P[i].type==="2D" ? "3D" : "2D"; change(); break;
+    case "tag": { const t = b.dataset.t, tg = P[i].tags = P[i].tags || []; tg.includes(t) ? tg.splice(tg.indexOf(t),1) : tg.push(t); P[i].tags = TAGS.filter(x=>tg.includes(x)); change(); break; }
+    case "move": {
+      const p = P[i];
+      if(p.group==="work"){ p.group="more"; p.type = p.kind || p.type; p.meta.Date = p.meta.Date || p.meta.Year || ""; }
+      else { p.group="work"; p.kind = p.type; p.type = /3d/i.test(p.type) ? "3D" : "2D"; p.meta.Year = p.meta.Year || p.meta.Date || ""; }
+      change(); break; }
+    case "vid-add":
+      if(!ASSETS){ status("Video upload isn't available in this view."); return; }
+      pendingUpload = {i, j:null, video:true};
+      $("#fileIn").accept = "video/mp4,video/webm,video/quicktime"; $("#fileIn").multiple = false; $("#fileIn").value = ""; $("#fileIn").click(); break;
+    case "del": case "del-edu": case "del-link": case "img-del": case "vid-del": {
+      const key = a+":"+i+":"+j;
+      if(armed !== key){ armed = key; b.textContent = "Click again to confirm"; setTimeout(()=>{ if(armed===key) armed=null; }, 4000); return; }
+      armed = null;
+      if(a==="del") P.splice(i,1);
+      if(a==="del-edu") S.profile.education.splice(j,1);
+      if(a==="del-link") S.profile.links.splice(j,1);
+      if(a==="img-del") P[i].images.splice(j,1);
+      if(a==="vid-del"){ P[i].clips.splice(j,1); if(!P[i].clips.length) delete P[i].clips; }
+      change(); break; }
+    case "add-project": {
+      const g = b.dataset.g, id = "project-" + Date.now().toString(36);
+      P.push(g==="work"
+        ? {id, group:"work", type:"3D", kind:"3D Environment", title:"New Project", hue:Math.floor(Math.random()*360), subtitle:"One-line description.", meta:{Year:"2026", Timeframe:"", Category:"Personal project", Engine:""}, tools:"", overview:["Describe the project."], process:[], images:["Cover"]}
+        : {id, group:"more", type:"Game", title:"New Project", hue:Math.floor(Math.random()*360), subtitle:"One-line description.", meta:{Date:"2026", Category:"Game"}, overview:["Describe the project."], images:["Cover"]});
+      dirty = true; location.hash = id; break; }
+    case "add-par": { const arr = get(b.dataset.k) || []; arr.push(""); set(b.dataset.k, arr); change();
+      const els = document.querySelectorAll(`[data-k^="${b.dataset.k}."]`); els[els.length-1]?.focus(); break; }
+    case "add-edu": S.profile.education.push({years:"", school:"School", program:"Program", place:""}); change(); break;
+    case "add-link": S.profile.links.push({label:"New link", url:"https://"}); change(); break;
+    case "img-cover": { const [im] = P[i].images.splice(j,1); P[i].images.unshift(im); change(); break; }
+    case "img-ph": P[i].images.push("New image"); change(); break;
+    case "img-add": case "img-replace":
+      if(!ASSETS){ status("Image upload isn't available in this view."); return; }
+      pendingUpload = {i, j: a==="img-replace" ? j : null};
+      $("#fileIn").accept = "image/*"; $("#fileIn").multiple = a==="img-add"; $("#fileIn").value = ""; $("#fileIn").click(); break;
+  }
+});
+
+$("#fileIn").addEventListener("change", async e=>{
+  const files = [...e.target.files]; if(!files.length || !pendingUpload) return;
+  const {i, j, video} = pendingUpload; pendingUpload = null;
+  if(video){
+    const file = files[0]; status("Uploading video…");
+    try{
+      const r = await ASSETS.upload(file);
+      (S.projects[i].clips = S.projects[i].clips || []).push({label: file.name.replace(/\.[^.]+$/,""), src:r.url});
+      dirty = true; render(false); status("Video uploaded. Save to publish.");
+    }catch(err){
+      status(err.code==="too_large" ? `${file.name} is too large (max 20 MB).`
+        : err.code==="unsupported_type" ? `${file.name} isn't a supported video type. Use MP4 or WebM.`
+        : `Couldn't upload ${file.name}: ${err.message||err.code}`, true);
+    }
+    return;
+  }
+  let done = 0;
+  for(const file of files){
+    status(`Uploading ${done+1} of ${files.length}…`);
+    try{
+      const r = await ASSETS.upload(file);
+      const old = j!=null ? S.projects[i].images[j] : null;
+      const label = (old && lbl(old)) || file.name.replace(/\.[^.]+$/,"");
+      if(j!=null) S.projects[i].images[j] = {label, src:r.url};
+      else S.projects[i].images.push({label, src:r.url});
+      done++; dirty = true; render(false);
+    }catch(err){
+      status(err.code==="too_large" ? `${file.name} is too large (max 20 MB).`
+        : err.code==="unsupported_type" ? `${file.name} isn't a supported image type.`
+        : `Couldn't upload ${file.name}: ${err.message||err.code}`, true);
+      return;
+    }
+  }
+  status(`${done} image${done>1?"s":""} uploaded. Save to publish.`);
+});
+
+/* ---------- lightbox: zoom, pan, prev/next ---------- */
+let lastFocus, lbP = null, lbJ = 0;
+const Z = {s:1, x:0, y:0, min:1, max:6};
+const lbImg = () => $("#lbStage img");
+function lbApply(anim){
+  const im = lbImg(); if(!im) return;
+  im.style.transition = anim ? "transform .22s cubic-bezier(.2,.7,.1,1)" : "none";
+  im.style.transform = `translate(${Z.x}px,${Z.y}px) scale(${Z.s})`;
+  $("#lbStage").classList.toggle("zoomed", Z.s > 1.01);
+  $("#lbZoom").textContent = Math.round(Z.s*100) + "%";
+}
+function lbClamp(){
+  const im = lbImg(), st = $("#lbStage"); if(!im) return;
+  const mx = Math.max(0, (im.offsetWidth*Z.s - st.clientWidth)/2), my = Math.max(0, (im.offsetHeight*Z.s - st.clientHeight)/2);
+  Z.x = Math.min(mx, Math.max(-mx, Z.x)); Z.y = Math.min(my, Math.max(-my, Z.y));
+}
+/* zoom to scale ns keeping the stage point (cx,cy) fixed; cx,cy measured from stage centre */
+function lbZoomAt(ns, cx=0, cy=0, anim){
+  ns = Math.min(Z.max, Math.max(Z.min, ns));
+  Z.x = cx - (cx - Z.x) * (ns / Z.s); Z.y = cy - (cy - Z.y) * (ns / Z.s); Z.s = ns;
+  if(ns <= 1.001){ Z.s = 1; Z.x = 0; Z.y = 0; }
+  lbClamp(); lbApply(anim);
+}
+const lbReset = anim => { Z.s = 1; Z.x = 0; Z.y = 0; lbApply(anim); };
+function stagePoint(e){ const r = $("#lbStage").getBoundingClientRect(); return [e.clientX - r.left - r.width/2, e.clientY - r.top - r.height/2]; }
+function lbShow(j){
+  const n = lbP.images.length; lbJ = (j + n) % n;
+  const im = lbP.images[lbJ];
+  $("#lbStage").innerHTML = (im && typeof im === "object" && im.src)
+    ? `<img src="${esc(im.src)}" alt="${esc(im.label||lbP.title)}" draggable="false">`
+    : `<div class="shot">${media(lbP, im)}</div>`;
+  $("#lbCap").textContent = lbP.title + " — " + lbl(im);
+  $("#lbCount").textContent = `${lbJ+1} / ${n}`;
+  $("#lbPrev").hidden = $("#lbNext").hidden = n < 2;
+  lbReset(false);
+}
+function openLb(p,j,el){
+  lastFocus = el; lbP = p;
+  $("#lb").hidden = false; document.documentElement.style.overflow = "hidden";
+  lbShow(j); $("#lbClose").focus();
+}
+function closeLb(){ $("#lb").hidden = true; document.documentElement.style.overflow = ""; lbP = null; lastFocus && lastFocus.focus(); }
+$("#lbClose").onclick = closeLb;
+$("#lbPrev").onclick = ()=> lbShow(lbJ-1);
+$("#lbNext").onclick = ()=> lbShow(lbJ+1);
+$("#lbIn").onclick = ()=> lbZoomAt(Z.s*1.5, 0, 0, true);
+$("#lbOut").onclick = ()=> lbZoomAt(Z.s/1.5, 0, 0, true);
+$("#lbFit").onclick = ()=> lbReset(true);
+let justMoved = 0;
+function onImage(e){ const im = lbImg() || $("#lbStage .shot"); if(!im) return false; const r = im.getBoundingClientRect(); return e.clientX>=r.left && e.clientX<=r.right && e.clientY>=r.top && e.clientY<=r.bottom; }
+$("#lb").addEventListener("click", e=>{
+  if(Date.now() - justMoved < 300) return;
+  if(e.target.id==="lb" || (e.target.id==="lbStage" && Z.s<=1.01 && !onImage(e))) closeLb();
+});
+addEventListener("keydown", e=>{
+  if($("#lb").hidden) return;
+  if(e.key==="Escape") closeLb();
+  else if(e.key==="ArrowLeft") lbShow(lbJ-1);
+  else if(e.key==="ArrowRight") lbShow(lbJ+1);
+  else if(e.key==="+" || e.key==="=") lbZoomAt(Z.s*1.5,0,0,true);
+  else if(e.key==="-") lbZoomAt(Z.s/1.5,0,0,true);
+  else if(e.key==="0") lbReset(true);
+  else return;
+  e.preventDefault();
+});
+/* wheel / trackpad zoom */
+$("#lbStage").addEventListener("wheel", e=>{
+  if(!lbImg()) return;
+  e.preventDefault();
+  const [cx,cy] = stagePoint(e);
+  lbZoomAt(Z.s * Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.0022)), cx, cy, false);
+}, {passive:false});
+/* double click / double tap toggles zoom */
+$("#lbStage").addEventListener("dblclick", e=>{
+  if(!lbImg()) return;
+  const [cx,cy] = stagePoint(e);
+  Z.s > 1.01 ? lbReset(true) : lbZoomAt(2.5, cx, cy, true);
+});
+/* drag to pan, pinch to zoom, swipe to change image */
+const ptrs = new Map(); let g = null;
+$("#lbStage").addEventListener("pointerdown", e=>{
+  if(!lbImg() || e.button>0) return;
+  $("#lbStage").setPointerCapture(e.pointerId);
+  ptrs.set(e.pointerId, [e.clientX, e.clientY]);
+  if(ptrs.size === 2){
+    const [a,b] = [...ptrs.values()];
+    g = {pinch:true, d:Math.hypot(a[0]-b[0], a[1]-b[1]), s:Z.s, x:Z.x, y:Z.y, mid:stagePoint({clientX:(a[0]+b[0])/2, clientY:(a[1]+b[1])/2})};
+  } else g = {pinch:false, sx:e.clientX, sy:e.clientY, x:Z.x, y:Z.y, t:Date.now(), moved:false};
+});
+$("#lbStage").addEventListener("pointermove", e=>{
+  if(!ptrs.has(e.pointerId) || !g) return;
+  ptrs.set(e.pointerId, [e.clientX, e.clientY]);
+  if(g.pinch && ptrs.size === 2){
+    const [a,b] = [...ptrs.values()], d = Math.hypot(a[0]-b[0], a[1]-b[1]);
+    Z.s = g.s; Z.x = g.x; Z.y = g.y;
+    lbZoomAt(g.s * d / g.d, g.mid[0], g.mid[1], false);
+  } else if(!g.pinch){
+    const dx = e.clientX - g.sx, dy = e.clientY - g.sy;
+    if(Math.abs(dx)+Math.abs(dy) > 4) g.moved = true;
+    if(Z.s > 1.01){ Z.x = g.x + dx; Z.y = g.y + dy; lbClamp(); lbApply(false); }
+  }
+});
+function ptrEnd(e){
+  if(!ptrs.has(e.pointerId)) return;
+  ptrs.delete(e.pointerId);
+  if(g && (g.moved || g.pinch)) justMoved = Date.now();
+  if(g && !g.pinch && Z.s <= 1.01 && g.moved){
+    const dx = e.clientX - g.sx, dy = e.clientY - g.sy;
+    if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)*1.5 && Date.now()-g.t < 600) lbShow(lbJ + (dx < 0 ? 1 : -1));
+  }
+  if(ptrs.size === 0) g = null;
+  else if(ptrs.size === 1){ const [p] = [...ptrs.values()]; g = {pinch:false, sx:p[0], sy:p[1], x:Z.x, y:Z.y, t:Date.now(), moved:true}; }
+}
+$("#lbStage").addEventListener("pointerup", ptrEnd);
+$("#lbStage").addEventListener("pointercancel", ptrEnd);
+addEventListener("resize", ()=>{ if(!$("#lb").hidden){ lbClamp(); lbApply(false); } });
+
+/* ---------- edit mode + save ---------- */
+let msg = "", msgSticky = false;
+function status(t, sticky){ msg = t; msgSticky = !!sticky; updateBar(); }
+function updateBar(){
+  document.body.classList.toggle("editing", editing);
+  $("#editFab").hidden = !ART || !ASSETS || editing;
+  $("#editBar").hidden = !editing;
+  if(!editing) return;
+  $("#editSt").innerHTML = msg ? esc(msg) : dirty ? "<b>Unsaved changes.</b> Click any dashed text to edit it." : "Editing. Click any dashed text to change it.";
+  $("#btnSave").disabled = !dirty || saving;
+  $("#btnSave").textContent = saving ? "Saving…" : "Save";
+  $("#btnDiscard").textContent = dirty ? "Discard" : "Done";
+}
+$("#editFab").onclick = ()=>{ editing = true; msg = ""; render(false); };
+$("#btnDiscard").onclick = ()=>{
+  S = JSON.parse(JSON.stringify(DATA)); dirty = false; editing = false; msg = "";
+  if(!S.projects.some(p=>p.id===location.hash.slice(1)) && /^#project-/.test(location.hash)) location.hash = "works";
+  render(false);
+};
+function cleaned(){
+  const c = JSON.parse(JSON.stringify(S));
+  const tidy = a => (a||[]).map(s=>String(s).trim()).filter(Boolean);
+  c.profile.about = tidy(c.profile.about);
+  c.projects.forEach(p=>{
+    p.overview = tidy(p.overview); p.process = tidy(p.process);
+    if(!p.process.length) delete p.process;
+    if(p.tools!=null && !String(p.tools).trim()) delete p.tools;
+    if(p.video!=null && !String(p.video).trim()) delete p.video;
+  });
+  return c;
+}
+const RESET_FALLBACK = ":root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}";
+const headStyle = document.head && document.head.querySelector("style");
+const RESET = headStyle && /safe-area-inset/.test(headStyle.textContent) ? headStyle.textContent : RESET_FALLBACK;
+function buildDoc(state){
+  const SC = "<" + "/script>";
+  const json = JSON.stringify(state).replace(/</g,"\\u003c");
+  const fonts = document.querySelector('link[href*="fonts.googleapis.com/css2"]').outerHTML;
+  const style = document.getElementById("site-style").outerHTML;
+  const shell = '<div id="app"></div><div class="prev" id="prev" hidden></div>'
+    + '<div class="lb" id="lb" hidden><div class="lb-in" role="dialog" aria-modal="true" aria-label="Image viewer"><div class="lb-stage" id="lbStage"></div><button class="lb-nav prev-b" id="lbPrev" aria-label="Previous image">←</button><button class="lb-nav next-b" id="lbNext" aria-label="Next image">→</button><div class="lb-bar"><span class="mono lb-count" id="lbCount"></span><span class="lb-cap" id="lbCap"></span><span class="lb-tools"><button id="lbOut" aria-label="Zoom out">−</button><span class="mono" id="lbZoom">100%</span><button id="lbIn" aria-label="Zoom in">+</button><button id="lbFit">Fit</button><button id="lbClose">Close · Esc</button></span></div></div></div>'
+    + '<button class="editfab" id="editFab" hidden>Edit site</button>'
+    + '<div class="editbar" id="editBar" hidden><div class="in"><span class="st" id="editSt"></span><button id="btnDiscard">Discard</button><button class="primary" id="btnSave">Save</button></div></div>'
+    + '<input type="file" id="fileIn" accept="image/*" multiple hidden>';
+  return '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>' + RESET + '</style></head><body>'
+    + '<title>' + TITLE + '</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n' + fonts + '\n' + style + '\n'
+    + shell + '\n<script type="application/json" id="site-data">' + json + SC + '\n<script>' + APP_SRC + SC + '</body></html>';
+}
+$("#btnSave").onclick = async ()=>{
+  if(!dirty || saving) return;
+  saving = true; msg = ""; updateBar();
+  try{
+    await ART.publish(buildDoc(cleaned()));
+    status("Saved. Reloading the published version…");
+  }catch(err){
+    saving = false;
+    if(err.code==="conflict") status("Someone saved a newer version first. Reloading to it.");
+    else if(err.code==="not_writer" || err.code==="not_granted"){ status("This view is read-only, so changes can't be saved here."); ART = null; }
+    else if(err.code==="rate_limited") status("Saving too often. Wait a moment, then save again.");
+    else if(err.code==="too_large") status("The page is too large to save. Remove some content and try again.");
+    else status("Couldn't save: " + (err.message || err.code) + ". Try again.");
+  }
+};
+addEventListener("beforeunload", e=>{ if(dirty && !saving){ e.preventDefault(); e.returnValue = ""; } });
+
+/* ---------- language + theme ---------- */
+const I18N = {"zh": {"Work": "作品", "Games": "游戏", "About": "关于", "Contact": "联系", "Open to work": "可接受工作邀约", "Copenhagen, Denmark": "丹麦 哥本哈根", "Available for new projects": "可接新项目", "Chinese game artist studying Visual and Game Design at the Royal Danish Academy. I build immersive worlds that connect people through play and imagination.": "来自中国的游戏美术，就读于丹麦皇家艺术学院视觉与游戏设计专业。我创造沉浸式的世界，用游戏和想象力把人们联结在一起。", "3D Artist": "3D 美术", "2D Artist": "2D 美术", "Art Direction": "美术指导", "View work": "查看作品", "Selected work": "精选作品", "2D Character Design": "2D 角色设计", "Card Art": "卡牌美术", "Graduation project: a card-based character series based on the twelve Jungian archetypes.": "毕业设计：以荣格十二原型为基础的卡牌角色系列。", "Illustration": "插画", "View project": "查看项目", "Interactive deck": "互动卡组", "2D Board Game Art": "2D 桌游美术", "A German-style strategy board game set in a war-torn animal kingdom.": "一款德式策略桌游，故事发生在饱受战火的动物王国。", "Concept Art": "概念设计", "3 months": "3 个月", "2D Concept": "2D 概念", "Narrative": "叙事", "A detective mystery in a village where everyone wears a mask.": "一个人人戴着面具的村庄里的侦探悬疑故事。", "Ongoing": "进行中", "Key Art": "主视觉", "Character Concept": "角色概念", "3D Props": "3D 道具", "Texturing": "贴图绘制", "Fyrmester: The Burden of Light": "Fyrmester：光之重负", "A psychological maritime thriller set in 19th-century Denmark, shaped through concept art, UI and stylized 3D.": "一款以 19 世纪丹麦为背景的海上心理惊悚游戏，通过概念设计、UI 和风格化 3D 塑造而成。", "Texture Art": "材质美术", "3D Environment": "3D 场景", "The Forest Nook": "林间小屋", "A warm fantasy interior: a scholar's secluded home in the forest.": "温暖的奇幻室内场景：一位学者隐居在森林中的家。", "20 days": "20 天", "A bioluminescent fantasy world inspired by underwater ecosystems.": "受海底生态启发的生物荧光奇幻世界。", "1 month": "1 个月", "More projects": "更多项目", "Jul 2025": "2025 年 7 月", "Game Jam 1: Deathwish": "Game Jam 1：Deathwish", "Game jam entry.": "Game jam 参赛作品。", "Feb 2026": "2026 年 2 月", "Original Artwork": "原创作品", "Original character artwork.": "原创角色插画。", "2D illustration →": "2D 插画 →", "I'm a game art student working across 2D and 3D: character design, illustration, texturing and visual storytelling. My work centers on building worlds that connect people through play and imagination.": "我是一名游戏美术学生，同时从事 2D 和 3D 创作：角色设计、插画、贴图和视觉叙事。我的作品专注于构建能通过游戏和想象力联结人们的世界。", "I'm looking for a design internship as part of my studies at the Royal Danish Academy, where I can bring character design, illustration and a sense of play to products people hold in their hands.": "我正在寻找一份设计实习，作为我在丹麦皇家艺术学院学业的一部分，希望把角色设计、插画和趣味感带到人们拿在手中的产品里。", "I try to stay humble and curious, and to keep room for creative growth in every project.": "我努力保持谦逊和好奇，在每个项目里给创意成长留出空间。", "Royal Danish Academy": "丹麦皇家艺术学院", "Visual and Game Design": "视觉与游戏设计", "Copenhagen": "哥本哈根", "Beijing Institute of Graphic Communication": "北京印刷学院", "Visual Communication Design": "视觉传达设计", "Beijing": "北京", "Proficiency": "技能", "Say hello": "打个招呼", "Let's collaborate": "一起合作吧", "Open to internships and junior roles. Get in touch about your project, or follow my work on the channels below.": "欢迎实习和初级职位的机会。欢迎联系我聊聊你的项目，或在下方渠道关注我的作品。", "Copy email": "复制邮箱", "Copied": "已复制", "Copied!": "已复制！", "Thank you for visiting. I'll get back to you as soon as possible.": "感谢来访，我会尽快回复你。", "Back to top ↑": "回到顶部 ↑", "Fit": "适应", "Close": "关闭", "← All projects": "← 全部项目", "Game artist builds worlds of play and imagination": "游戏美术，构建游戏与想象的世界", "Archetype Mirror": "原型之镜", "Drag cards to rearrange your hand. Click a card to bring it up close.": "拖动卡牌来重新排列手牌。点击卡牌可近距离查看。", "Shuffle": "洗牌", "Sort I–XII": "按 I–XII 排序", "Hover a card": "将鼠标移到卡牌上", "Mini game": "小游戏", "Which card are you?": "你是哪张牌？", "Eight quick questions. Answer on instinct and draw the archetype that matches you.": "八道快问快答。凭直觉作答，抽出与你相配的原型。", "Start the reading": "开始占卜", "Year": "年份", "Category": "类别", "Graduation project": "毕业设计", "Overview": "概述", "The series turns abstract psychological ideas into clear visual identities through character design, shape language, color and materials.": "这个系列通过角色设计、形状语言、色彩和材质，把抽象的心理学概念转化为清晰的视觉形象。", "Printed deck": "印刷卡组", "The cards in hand": "拿在手中的卡牌", "Cards on a silver mirror tray": "银色镜面托盘上的卡牌", "A fanned spread": "扇形展开", "Flat lay of the deck": "卡组平铺", "XII The Lover, in hand": "XII 情种，拿在手中", "VII The Hero and XII The Lover": "VII 英雄与 XII 情种", "I The Magician and II The Jester": "I 魔术师与 II 小丑", "III The Ruler and IV The Caregiver": "III 统治者与 IV 照顾者", "VI The Explorer and VIII The Sage": "VI 探险家与 VIII 智者", "X The Everyman and XI The Outlaw": "X 常人与 XI 反叛者", "Box and guide booklet": "卡盒与说明手册", "From screen to print": "从屏幕到印刷", "Design and the printed card": "设计稿与印刷成品", "Digital file": "数字文件", "Printed": "印刷品", "XII Lover": "XII 情种", "VII Hero": "VII 英雄", "I Magician": "I 魔术师", "II Jester": "II 小丑", "Next project →": "下一个项目 →", "The Magician": "魔术师", "Transformation. Turns vision into reality.": "蜕变。把愿景化为现实。", "The Jester": "小丑", "Joy. Lives fully in the moment.": "快乐。全然活在当下。", "The Ruler": "统治者", "Control. Brings order to chaos.": "掌控。在混乱中建立秩序。", "The Caregiver": "照顾者", "Service. Protects and nurtures others.": "奉献。守护并滋养他人。", "The Creator": "创造者", "Imagination. Gives form to new ideas.": "想象。为新想法赋予形态。", "The Explorer": "探险家", "Freedom. Seeks what lies beyond.": "自由。追寻远方。", "The Hero": "英雄", "Courage. Proves worth through action.": "勇气。用行动证明价值。", "The Sage": "智者", "Wisdom. Searches for the truth.": "智慧。追寻真理。", "The Innocent": "天真者", "Faith. Longs for paradise.": "信念。向往乐园。", "The Everyman": "常人", "Belonging. Connects with others.": "归属。与他人相连。", "The Outlaw": "反叛者", "Liberation. Breaks the rules.": "解放。打破规则。", "The Lover": "情种", "Passion. Follows the heart.": "激情。追随内心。", "A free Saturday with no plans. You…": "一个没有安排的周六，你会……", "Head somewhere you've never been": "去一个从没去过的地方", "Make something: draw, cook, build": "动手做点什么：画画、做饭、搭东西", "Message friends to see what everyone's up to": "给朋友发消息，看看大家在干嘛", "Go deep into a book or a new topic": "钻进一本书或一个新话题", "← Back": "← 返回", "In a group project, you naturally…": "在小组项目里，你自然而然会……", "Take charge and set the plan": "主导并定下计划", "Check that everyone is doing okay": "确认每个人都还好", "Keep the mood light": "让气氛保持轻松", "Question the brief and try another way": "质疑需求，换个方法试试", "What would bother you most?": "什么最让你困扰？", "Being weak when it really matters": "关键时刻无能为力", "Being stuck somewhere boring": "被困在无聊的地方", "Being lied to": "被欺骗", "Being alone": "孤身一人", "Pick a door.": "选一扇门。", "A garden in morning sun": "晨光中的花园", "A stage behind a red curtain": "红色帷幕后的舞台", "A hall with a throne at the end": "尽头摆着王座的大厅", "A forest path at night": "夜晚的林间小路", "Friends usually come to you for…": "朋友通常来找你……", "Advice": "寻求建议", "Comfort": "寻求安慰", "A laugh": "找乐子", "The push to do the scary thing": "鼓起勇气去做可怕的事", "Which word would you most like to be remembered by?": "你最希望别人用哪个词记住你？", "Kind": "善良", "Brilliant": "聪明", "Brave": "勇敢", "Original": "独特", "A rule makes no sense to you. You…": "有一条规则你觉得毫无道理，你会……", "Follow it. There's probably a reason": "照做，可能有它的道理", "Rewrite it so it works properly": "改写它，让它真正合理", "Ignore it": "无视它", "Find a clever way around it": "找个巧妙的办法绕过去", "The best reward would be…": "最好的奖励是……", "A deep bond with someone": "和某人深厚的羁绊", "A place where everyone belongs": "一个人人都有归属的地方", "Seeing your idea become real": "看到自己的想法成真", "Freedom to go anywhere": "去任何地方的自由", "You drew": "你抽到了", "See your card up close": "近距离查看你的牌", "Take it again": "再测一次", "You see how things could be and quietly make them so. People find you a little mysterious, and that suits you.": "你看得见事物可能的样子，并悄悄让它成真。别人觉得你有点神秘，而这正适合你。", "You bring light into heavy rooms. Under the jokes is a sharp eye for what everyone else takes too seriously.": "你能让沉重的房间亮起来。玩笑之下，是你对别人过分较真之事的敏锐洞察。", "You make order out of chaos. People feel safer when you're the one holding the map.": "你能在混乱中建立秩序。由你拿着地图时，大家会更安心。", "You notice who needs help before they ask, and you give care without keeping score.": "你总能在别人开口前察觉谁需要帮助，付出关心却从不计较。", "You think with your hands. A blank page isn't empty to you, it's an invitation.": "你用双手思考。对你来说，白纸不是空白，而是邀请。", "You trust the road more than the destination. Staying still too long feels like losing yourself.": "比起目的地，你更相信路途。停留太久，会让你觉得迷失了自己。", "You step forward when others step back. Hard things are where you find out who you are.": "别人后退时，你向前一步。困难之处，正是你认清自己的地方。", "You would rather understand than win. Good questions are your favourite kind of treasure.": "比起赢，你更想弄明白。好问题是你最爱的宝藏。", "You believe the good in the world is real, and you help other people believe it too.": "你相信世界上的美好是真实的，也帮助别人相信这一点。", "You make people feel they belong. Honest, steady and easy to trust.": "你让人感到有归属。真诚、稳重，值得信赖。", "You question the rules everyone else accepts. Change often starts with someone like you.": "你质疑别人默认的规则。改变往往从你这样的人开始。", "You lead with the heart. Beauty, closeness and feeling are what make life worth living.": "你凭心而行。美、亲密和感受，是让生活值得的东西。", "Key art with the animal lords": "动物领主主视觉", "Timeframe": "时长", "Personal project": "个人项目", "Tools": "工具", "The game is set in a war-torn animal kingdom, where lords of different regions have fought for power for decades.": "游戏发生在一个饱受战火的动物王国，各地领主为争夺权力已混战数十年。", "Players take on the role of different lords to expand their territory and grow their power. Each lord has unique skills and architecture, and players use those traits to fight for the throne and win the game.": "玩家扮演不同的领主，扩张领土、壮大势力。每位领主都有独特的技能和建筑，玩家利用这些特点争夺王座、赢得游戏。", "Rules sheet: game goal, components and land event cards": "规则说明：游戏目标、配件和土地事件卡", "Kingdom event cards and building tiles": "王国事件卡与建筑板块", "Lord sheet: Ishella, Knight": "领主卡：Ishella，骑士", "Lord sheet: Grasiendi, Duke": "领主卡：Grasiendi，公爵", "Lord sheet: Eydmork, Bandit": "领主卡：Eydmork，强盗", "Lord sheet: Halendi, ENCHANIER": "领主卡：Halendi，ENCHANIER", "Title screen: newspaper-collage menu with the raven key art": "标题画面：报纸拼贴风格菜单与乌鸦主视觉", "Detective visual novel": "侦探视觉小说", "An indie project I'm currently developing, which began in last semester's Art Direction course. The story takes place at the beginning of the last century, when a detective is assigned to investigate a remote village.": "我正在开发的独立项目，起源于上学期的美术指导课程。故事发生在上世纪初，一名侦探被派往一个偏远村庄展开调查。", "Something strange has happened there: every villager wears a mask. What secrets are waiting for the detective to uncover?": "那里发生了怪事：每个村民都戴着面具。有什么秘密在等待侦探揭开？", "The World": "世界观", "A remote village early last century, where every villager wears a mask": "上世纪初的一个偏远村庄，每个村民都戴着面具", "Poster with the tagline “This is our land”": "海报，标语为“这是我们的土地”", "Characters": "角色", "The suspects, as the detective records them in the case file": "侦探记录在案卷中的嫌疑人", "Case file, People tab: suspect portraits with handwritten notes": "案卷“人物”页：嫌疑人肖像与手写笔记", "Investigation": "调查", "Collecting clues, visiting places and questioning villagers": "收集线索、走访地点、询问村民", "Case file, Places tab: taped photos and newspaper clippings": "案卷“地点”页：贴着的照片与剪报", "Interrogation at the railway, in black-and-white paper collage": "铁路边的审问，黑白纸张拼贴风格", "The Black Wing": "黑翼", "The final encounter": "最终对决", "Boss encounter with the many-eyed Black Wing": "与多眼的黑翼进行 Boss 战", "The main screens side by side": "主要画面一览", "The main screens together: title, dialogue, case file and boss encounter": "主要画面合集：标题、对话、案卷和 Boss 战", "Gameplay": "实机演示", "Footage from the current build": "当前版本的实机画面", "Gameplay video": "实机视频", "Case of the Black Wing": "黑翼案", "Fight of the Throne": "王座之争", "Title screen: the lighthouse at night with the game menu": "标题画面：夜晚的灯塔与游戏菜单", "Role": "职责", "CG Artist": "CG 美术", "Team": "团队", "17 people": "17 人", "DADIU game production": "DADIU 游戏制作", "Platform": "平台", "Download on itch.io": "在 itch.io 下载", "Download on itch.io ↗": "在 itch.io 下载 ↗", "A psychological maritime thriller set in 19th-century Denmark. You keep a lighthouse running through the night, feeding the stove, fixing the pump and keeping the light alive.": "一款以 19 世纪丹麦为背景的海上心理惊悚游戏。你要让灯塔撑过黑夜：给炉子添煤、修理水泵，让灯光一直亮着。", "My part: the key art poster, the character concept for the keeper, and a set of stylized 3D props, modelled and hand-textured, that furnish the lighthouse interior.": "我负责的部分：主视觉海报、守塔人的角色概念，以及一套布置灯塔内部的风格化 3D 道具（建模并手绘贴图）。", "A poster built around the keeper and the light he carries": "围绕守塔人和他守护的灯光而设计的海报", "Key art poster: the lighthouse keeper, his pipe and the storm": "主视觉海报：守塔人、他的烟斗与风暴", "From first sketches to the final front, side and back views": "从最初草图到最终的正、侧、背三视图", "Character concept: early sketches, three outfit iterations and the chosen turnaround": "角色概念：早期草图、三版服装迭代与最终三视图", "Jørgen asleep in a rocking chair under a blanket, modelled as one piece to save rigging time": "盖着毯子在摇椅上熟睡的 Jørgen，作为整体建模以节省绑定时间", "Stylized, hand-textured props for the lighthouse interior": "灯塔内部的风格化手绘贴图道具", "Bookshelf, low shelf and shovel": "书架、矮架和铲子", "Coastal rock with a mossy top": "顶部长着青苔的海岸礁石", "Storage bed with coal bucket and ladder": "储物床、煤桶和梯子", "Bunk bed and coal stove with chimney pipes": "双层床与带烟囱管的煤炉", "Modular wall panels, doors and wardrobe": "模块化墙板、门和衣柜", "Painted materials and the UV layouts behind them": "手绘材质及其 UV 布局", "Stove, kettle and water pump with their texture sheets": "炉子、水壶和水泵及其贴图", "In Game": "游戏内", "The props in place, lit and interactive": "道具在游戏中就位、打光并可互动", "Watch the game video on YouTube": "在 YouTube 观看游戏视频", "Watch the game video on YouTube ↗": "在 YouTube 观看游戏视频 ↗", "In game: repairing the water pump while windows and lights need attention": "游戏内：修理水泵，同时窗户和灯光也需要照看", "Final render in Unreal Engine 5: the scholar's study at night": "Unreal Engine 5 最终渲染：夜晚的学者书房", "Engine": "引擎", "The scene is the secluded home of a scholar living in the forest. The scholar's love of nature is told through detailed textures throughout the room.": "场景是一位隐居森林的学者的家。房间里细致的材质讲述着学者对自然的热爱。", "Process": "制作过程", "Wood grain and flooring materials were made in Substance Designer, along with a fireplace brick texture, a stone brick wall texture, and custom upholstery and fabric patterns for the sofa.": "木纹和地板材质在 Substance Designer 中制作，同时制作了壁炉砖纹、石砖墙纹，以及沙发的定制软包和布料图案。", "Smaller props were textured in Substance Painter. Models were built in Maya and rendered in Unreal Engine, where books and flooring were placed with Blueprints.": "较小的道具在 Substance Painter 中绘制贴图。模型在 Maya 中制作，在 Unreal Engine 中渲染，书本和地板通过蓝图摆放。", "Software": "软件", "Fireplace corner and bookshelves under warm firelight": "温暖火光下的壁炉角与书架", "Asset set: furniture, shelves, stone arch and brick wall": "资产合集：家具、书架、石拱和砖墙", "Wood grain in Substance Designer: Tile Sampler base with Warp, Cloud Noise and Dirt detail": "Substance Designer 中的木纹：以 Tile Sampler 为基础，加上 Warp、Cloud Noise 和 Dirt 细节", "Second wood variant and a patterned fabric built from Shape and Transform 2D nodes": "第二种木纹变体，以及用 Shape 和 Transform 2D 节点制作的花纹布料", "Red brick: Brick Generator and Flood Fill for variation, Cells noise for cracks": "红砖：用 Brick Generator 和 Flood Fill 制造变化，用 Cells 噪波做裂纹", "Stone brick from Tile Sampler and Distance; quilted sofa fabric": "用 Tile Sampler 和 Distance 制作的石砖；绗缝沙发布料", "Modeling in Maya, UV layout and material assignment": "Maya 建模、UV 布局与材质分配", "Assembly in Unreal: meshes, materials, Blueprint-placed books and lighting": "在 Unreal 中组装：模型、材质、蓝图摆放的书本和灯光", "Key art: a glowing coral and mushroom forest under the sea": "主视觉：海底发光的珊瑚与蘑菇森林", "An original fantasy realm deep in an ocean forest, home to invented creatures. The project is inspired by the creatures and landscapes of the Avatar films, aiming for a vibrant and mysterious world.": "一个深藏于海洋森林中的原创奇幻国度，栖息着虚构的生物。项目灵感来自《阿凡达》电影中的生物与地貌，力求打造一个充满活力又神秘的世界。", "All assets follow a PBR workflow. Models were built in Maya, with detail sculpted in ZBrush where needed. Details were baked in Marmoset Toolbag and materials were finished in Substance Painter.": "所有资产都遵循 PBR 流程。模型在 Maya 中制作，必要时在 ZBrush 中雕刻细节；细节在 Marmoset Toolbag 中烘焙，材质在 Substance Painter 中完成。", "Video": "视频", "Watch on YouTube": "在 YouTube 观看", "Overview sheet: the world, its creatures and gameplay": "概览：世界、生物与玩法", "Asset preparation: references and sculpts of coral, plants and creatures": "资产准备：珊瑚、植物和生物的参考与雕刻", "Pipeline from Maya modeling to Substance texturing to Unreal assembly": "从 Maya 建模、Substance 贴图到 Unreal 组装的流程", "Sky atmosphere, fog, lighting and particle effects in Unreal": "Unreal 中的天空大气、雾效、灯光和粒子特效", "Title screen with the neon retro-desktop look": "霓虹复古桌面风格的标题画面", "Date": "日期", "Watch the gameplay video for a look at the project.": "观看实机视频了解这个项目。", "Screenshots, UI elements and references": "截图、UI 元素与参考", "Wallpaper and in-game desktop design": "壁纸与游戏内桌面设计", "Level design and mechanics flow": "关卡设计与机制流程", "2D illustration": "2D 插画", "A winged dark rider charging through ice and flowers": "长着翅膀的黑暗骑士穿过冰与花冲锋", "A collection of original character illustrations.": "原创角色插画合集。", "A figure in a cathedral of stained-glass light": "彩色玻璃光影中的教堂人物", "Image viewer": "图片查看器", "Light mode": "浅色模式", "Dark mode": "深色模式", "Back to hand": "放回手牌", "Selected, press Ctrl+C": "已选中，请按 Ctrl+C"}, "da": {"Work": "Arbejde", "Games": "Spil", "About": "Om", "Contact": "Kontakt", "Open to work": "Åben for arbejde", "Copenhagen, Denmark": "København, Danmark", "Available for new projects": "Klar til nye projekter", "Chinese game artist studying Visual and Game Design at the Royal Danish Academy. I build immersive worlds that connect people through play and imagination.": "Kinesisk spilkunstner, der læser Visual and Game Design på Det Kongelige Akademi. Jeg skaber medrivende verdener, der forbinder mennesker gennem leg og fantasi.", "3D Artist": "3D-kunstner", "2D Artist": "2D-kunstner", "Art Direction": "Art direction", "View work": "Se arbejde", "Selected work": "Udvalgte projekter", "2D Character Design": "2D-karakterdesign", "Card Art": "Kortillustration", "Graduation project: a card-based character series based on the twelve Jungian archetypes.": "Afgangsprojekt: en kortbaseret karakterserie bygget på Jungs tolv arketyper.", "View project": "Se projekt", "Interactive deck": "Interaktivt kortspil", "2D Board Game Art": "2D-brætspilsgrafik", "A German-style strategy board game set in a war-torn animal kingdom.": "Et strategibrætspil i tysk stil, der foregår i et krigshærget dyrerige.", "Concept Art": "Konceptkunst", "3 months": "3 måneder", "2D Concept": "2D-koncept", "Narrative": "Fortælling", "A detective mystery in a village where everyone wears a mask.": "Et detektivmysterium i en landsby, hvor alle bærer maske.", "Ongoing": "I gang", "Key Art": "Key art", "Character Concept": "Karakterkoncept", "3D Props": "3D-rekvisitter", "Texturing": "Teksturering", "Fyrmester: The Burden of Light": "Fyrmester: Lysets byrde", "A psychological maritime thriller set in 19th-century Denmark, shaped through concept art, UI and stylized 3D.": "En psykologisk maritim thriller fra 1800-tallets Danmark, formet gennem konceptkunst, UI og stiliseret 3D.", "Texture Art": "Teksturkunst", "3D Environment": "3D-miljø", "The Forest Nook": "Skovkrogen", "A warm fantasy interior: a scholar's secluded home in the forest.": "Et varmt fantasy-interiør: en lærd mands afsides hjem i skoven.", "20 days": "20 dage", "A bioluminescent fantasy world inspired by underwater ecosystems.": "En selvlysende fantasyverden inspireret af undervandsøkosystemer.", "1 month": "1 måned", "More projects": "Flere projekter", "Jul 2025": "Jul. 2025", "Game jam entry.": "Bidrag til et game jam.", "Feb 2026": "Feb. 2026", "Original Artwork": "Egne værker", "Original character artwork.": "Originale karakterillustrationer.", "2D illustration →": "2D-illustration →", "I'm a game art student working across 2D and 3D: character design, illustration, texturing and visual storytelling. My work centers on building worlds that connect people through play and imagination.": "Jeg er spilkunststuderende og arbejder i både 2D og 3D: karakterdesign, illustration, teksturering og visuel fortælling. Mit arbejde handler om at bygge verdener, der forbinder mennesker gennem leg og fantasi.", "I'm looking for a design internship as part of my studies at the Royal Danish Academy, where I can bring character design, illustration and a sense of play to products people hold in their hands.": "Jeg søger en designpraktik som en del af mit studie på Det Kongelige Akademi, hvor jeg kan bringe karakterdesign, illustration og legesyge ind i produkter, folk holder i hænderne.", "I try to stay humble and curious, and to keep room for creative growth in every project.": "Jeg prøver at forblive ydmyg og nysgerrig og give plads til kreativ udvikling i hvert projekt.", "Royal Danish Academy": "Det Kongelige Akademi", "Copenhagen": "København", "Visual Communication Design": "Visuel kommunikation", "Proficiency": "Kompetencer", "Say hello": "Sig hej", "Let's collaborate": "Lad os samarbejde", "Open to internships and junior roles. Get in touch about your project, or follow my work on the channels below.": "Åben for praktik og juniorstillinger. Skriv til mig om dit projekt, eller følg mit arbejde på kanalerne herunder.", "Copy email": "Kopiér e-mail", "Copied": "Kopieret", "Copied!": "Kopieret!", "Thank you for visiting. I'll get back to you as soon as possible.": "Tak for besøget. Jeg vender tilbage hurtigst muligt.", "Back to top ↑": "Til toppen ↑", "Fit": "Tilpas", "Close": "Luk", "← All projects": "← Alle projekter", "Game artist builds worlds of play and imagination": "Spilkunstner, der bygger verdener af leg og fantasi", "Archetype Mirror": "Arketypespejlet", "Drag cards to rearrange your hand. Click a card to bring it up close.": "Træk i kortene for at ordne din hånd. Klik på et kort for at se det tæt på.", "Shuffle": "Bland", "Sort I–XII": "Sortér I–XII", "Hover a card": "Hold musen over et kort", "Mini game": "Minispil", "Which card are you?": "Hvilket kort er du?", "Eight quick questions. Answer on instinct and draw the archetype that matches you.": "Otte hurtige spørgsmål. Svar på instinkt, og træk den arketype, der passer til dig.", "Start the reading": "Start læsningen", "Year": "År", "Category": "Kategori", "Graduation project": "Afgangsprojekt", "Overview": "Overblik", "The series turns abstract psychological ideas into clear visual identities through character design, shape language, color and materials.": "Serien omsætter abstrakte psykologiske idéer til tydelige visuelle identiteter gennem karakterdesign, formsprog, farver og materialer.", "Printed deck": "Den trykte kortbunke", "The cards in hand": "Kortene i hånden", "Cards on a silver mirror tray": "Kort på en sølvspejlbakke", "A fanned spread": "Kortene vifter ud", "Flat lay of the deck": "Hele kortbunken lagt ud", "XII The Lover, in hand": "XII Elskeren, i hånden", "VII The Hero and XII The Lover": "VII Helten og XII Elskeren", "I The Magician and II The Jester": "I Magikeren og II Narren", "III The Ruler and IV The Caregiver": "III Herskeren og IV Omsorgsgiveren", "VI The Explorer and VIII The Sage": "VI Opdageren og VIII Vismanden", "X The Everyman and XI The Outlaw": "X Den Almindelige og XI Oprøreren", "Box and guide booklet": "Æske og guidehæfte", "From screen to print": "Fra skærm til tryk", "Design and the printed card": "Designet og det trykte kort", "Digital file": "Digital fil", "Printed": "Trykt", "XII Lover": "XII Elskeren", "VII Hero": "VII Helten", "I Magician": "I Magikeren", "II Jester": "II Narren", "Next project →": "Næste projekt →", "The Magician": "Magikeren", "Transformation. Turns vision into reality.": "Forvandling. Gør visioner til virkelighed.", "The Jester": "Narren", "Joy. Lives fully in the moment.": "Glæde. Lever fuldt ud i nuet.", "The Ruler": "Herskeren", "Control. Brings order to chaos.": "Kontrol. Skaber orden i kaos.", "The Caregiver": "Omsorgsgiveren", "Service. Protects and nurtures others.": "Omsorg. Beskytter og nærer andre.", "The Creator": "Skaberen", "Imagination. Gives form to new ideas.": "Fantasi. Giver nye idéer form.", "The Explorer": "Opdageren", "Freedom. Seeks what lies beyond.": "Frihed. Søger det, der ligger bagved.", "The Hero": "Helten", "Courage. Proves worth through action.": "Mod. Viser sit værd gennem handling.", "The Sage": "Vismanden", "Wisdom. Searches for the truth.": "Visdom. Søger sandheden.", "The Innocent": "Den Uskyldige", "Faith. Longs for paradise.": "Tro. Længes efter paradis.", "The Everyman": "Den Almindelige", "Belonging. Connects with others.": "Fællesskab. Knytter bånd til andre.", "The Outlaw": "Oprøreren", "Liberation. Breaks the rules.": "Frigørelse. Bryder reglerne.", "The Lover": "Elskeren", "Passion. Follows the heart.": "Lidenskab. Følger hjertet.", "A free Saturday with no plans. You…": "En fri lørdag uden planer. Du…", "Head somewhere you've never been": "Tager et sted hen, du aldrig har været", "Make something: draw, cook, build": "Laver noget: tegner, laver mad, bygger", "Message friends to see what everyone's up to": "Skriver til vennerne for at høre, hvad de laver", "Go deep into a book or a new topic": "Fordyber dig i en bog eller et nyt emne", "← Back": "← Tilbage", "In a group project, you naturally…": "I et gruppeprojekt vil du helt naturligt…", "Take charge and set the plan": "Tage styringen og lægge planen", "Check that everyone is doing okay": "Sikre dig, at alle har det godt", "Keep the mood light": "Holde stemningen let", "Question the brief and try another way": "Stille spørgsmål ved opgaven og prøve en anden vej", "What would bother you most?": "Hvad ville genere dig mest?", "Being weak when it really matters": "At være svag, når det virkelig gælder", "Being stuck somewhere boring": "At sidde fast et kedeligt sted", "Being lied to": "At blive løjet for", "Being alone": "At være alene", "Pick a door.": "Vælg en dør.", "A garden in morning sun": "En have i morgensol", "A stage behind a red curtain": "En scene bag et rødt tæppe", "A hall with a throne at the end": "En sal med en trone for enden", "A forest path at night": "En skovsti om natten", "Friends usually come to you for…": "Dine venner kommer som regel til dig for at få…", "Advice": "Råd", "Comfort": "Trøst", "A laugh": "Et grin", "The push to do the scary thing": "Skubbet til at gøre det, der er skræmmende", "Which word would you most like to be remembered by?": "Hvilket ord vil du helst huskes for?", "Kind": "Venlig", "Brilliant": "Genial", "Brave": "Modig", "A rule makes no sense to you. You…": "En regel giver ingen mening for dig. Du…", "Follow it. There's probably a reason": "Følger den. Der er nok en grund", "Rewrite it so it works properly": "Omskriver den, så den virker ordentligt", "Ignore it": "Ignorerer den", "Find a clever way around it": "Finder en snedig vej udenom", "The best reward would be…": "Den bedste belønning ville være…", "A deep bond with someone": "Et dybt bånd til et andet menneske", "A place where everyone belongs": "Et sted, hvor alle hører til", "Seeing your idea become real": "At se din idé blive til virkelighed", "Freedom to go anywhere": "Frihed til at tage hvor som helst hen", "You drew": "Du trak", "See your card up close": "Se dit kort tæt på", "Take it again": "Tag den igen", "You see how things could be and quietly make them so. People find you a little mysterious, and that suits you.": "Du ser, hvordan tingene kunne være, og gør dem stille og roligt sådan. Folk synes, du er lidt mystisk, og det klæder dig.", "You bring light into heavy rooms. Under the jokes is a sharp eye for what everyone else takes too seriously.": "Du bringer lys ind i tunge rum. Under spøgen gemmer sig et skarpt blik for det, alle andre tager for alvorligt.", "You make order out of chaos. People feel safer when you're the one holding the map.": "Du skaber orden i kaos. Folk føler sig trygge, når det er dig, der holder kortet.", "You notice who needs help before they ask, and you give care without keeping score.": "Du opdager, hvem der har brug for hjælp, før de spørger, og du giver omsorg uden at føre regnskab.", "You think with your hands. A blank page isn't empty to you, it's an invitation.": "Du tænker med hænderne. Et blankt ark er ikke tomt for dig, det er en invitation.", "You trust the road more than the destination. Staying still too long feels like losing yourself.": "Du stoler mere på vejen end på målet. At stå stille for længe føles som at miste dig selv.", "You step forward when others step back. Hard things are where you find out who you are.": "Du træder frem, når andre træder tilbage. Det er i det svære, du finder ud af, hvem du er.", "You would rather understand than win. Good questions are your favourite kind of treasure.": "Du vil hellere forstå end vinde. Gode spørgsmål er din yndlingsskat.", "You believe the good in the world is real, and you help other people believe it too.": "Du tror på, at det gode i verden er virkeligt, og du hjælper andre med at tro på det.", "You make people feel they belong. Honest, steady and easy to trust.": "Du får folk til at føle, at de hører til. Ærlig, stabil og nem at stole på.", "You question the rules everyone else accepts. Change often starts with someone like you.": "Du stiller spørgsmål ved de regler, alle andre accepterer. Forandring begynder ofte med en som dig.", "You lead with the heart. Beauty, closeness and feeling are what make life worth living.": "Du lader hjertet lede. Skønhed, nærhed og følelser er det, der gør livet værd at leve.", "Key art with the animal lords": "Key art med dyrefyrsterne", "Timeframe": "Tidsramme", "Personal project": "Personligt projekt", "Tools": "Værktøjer", "The game is set in a war-torn animal kingdom, where lords of different regions have fought for power for decades.": "Spillet foregår i et krigshærget dyrerige, hvor fyrster fra forskellige egne har kæmpet om magten i årtier.", "Players take on the role of different lords to expand their territory and grow their power. Each lord has unique skills and architecture, and players use those traits to fight for the throne and win the game.": "Spillerne påtager sig rollen som forskellige fyrster, der udvider deres territorium og øger deres magt. Hver fyrste har unikke evner og bygninger, som spillerne bruger til at kæmpe om tronen og vinde spillet.", "Rules sheet: game goal, components and land event cards": "Regelark: spillets mål, komponenter og landbegivenhedskort", "Kingdom event cards and building tiles": "Rigets begivenhedskort og bygningsbrikker", "Lord sheet: Ishella, Knight": "Fyrsteark: Ishella, ridder", "Lord sheet: Grasiendi, Duke": "Fyrsteark: Grasiendi, hertug", "Lord sheet: Eydmork, Bandit": "Fyrsteark: Eydmork, bandit", "Lord sheet: Halendi, ENCHANIER": "Fyrsteark: Halendi, ENCHANIER", "Title screen: newspaper-collage menu with the raven key art": "Titelskærm: menu i aviscollage med ravne-key art", "Detective visual novel": "Detektiv-visual novel", "An indie project I'm currently developing, which began in last semester's Art Direction course. The story takes place at the beginning of the last century, when a detective is assigned to investigate a remote village.": "Et indie-projekt, jeg er ved at udvikle, og som begyndte på sidste semesters Art Direction-kursus. Historien foregår i begyndelsen af forrige århundrede, hvor en detektiv sendes ud for at efterforske en afsides landsby.", "Something strange has happened there: every villager wears a mask. What secrets are waiting for the detective to uncover?": "Der er sket noget mærkeligt: alle landsbyboere bærer maske. Hvilke hemmeligheder venter på at blive afsløret?", "The World": "Verdenen", "A remote village early last century, where every villager wears a mask": "En afsides landsby i begyndelsen af forrige århundrede, hvor alle bærer maske", "Poster with the tagline “This is our land”": "Plakat med sloganet “This is our land”", "Characters": "Karakterer", "The suspects, as the detective records them in the case file": "De mistænkte, som detektiven noterer dem i sagsmappen", "Case file, People tab: suspect portraits with handwritten notes": "Sagsmappe, fanen Personer: portrætter af de mistænkte med håndskrevne noter", "Investigation": "Efterforskning", "Collecting clues, visiting places and questioning villagers": "Indsamling af spor, besøg og afhøring af landsbyboere", "Case file, Places tab: taped photos and newspaper clippings": "Sagsmappe, fanen Steder: fastklistrede fotos og avisudklip", "Interrogation at the railway, in black-and-white paper collage": "Afhøring ved jernbanen i sort-hvid papircollage", "The Black Wing": "Den Sorte Vinge", "The final encounter": "Det endelige møde", "Boss encounter with the many-eyed Black Wing": "Bosskamp mod den mangeøjede Sorte Vinge", "The main screens side by side": "Hovedskærmene side om side", "The main screens together: title, dialogue, case file and boss encounter": "Hovedskærmene samlet: titel, dialog, sagsmappe og bosskamp", "Footage from the current build": "Optagelser fra den nuværende version", "Gameplay video": "Gameplayvideo", "Case of the Black Wing": "Sagen om Den Sorte Vinge", "Fight of the Throne": "Kampen om tronen", "Title screen: the lighthouse at night with the game menu": "Titelskærm: fyrtårnet om natten med spilmenuen", "Role": "Rolle", "CG Artist": "CG-kunstner", "17 people": "17 personer", "DADIU game production": "DADIU-spilproduktion", "Download on itch.io": "Download på itch.io", "Download on itch.io ↗": "Download på itch.io ↗", "A psychological maritime thriller set in 19th-century Denmark. You keep a lighthouse running through the night, feeding the stove, fixing the pump and keeping the light alive.": "En psykologisk maritim thriller fra 1800-tallets Danmark. Du holder et fyrtårn i gang natten igennem: fyrer i ovnen, reparerer pumpen og holder lyset tændt.", "My part: the key art poster, the character concept for the keeper, and a set of stylized 3D props, modelled and hand-textured, that furnish the lighthouse interior.": "Min del: key art-plakaten, karakterkonceptet til fyrmesteren og et sæt stiliserede 3D-rekvisitter, modelleret og håndteksturet, som indretter fyrtårnet.", "A poster built around the keeper and the light he carries": "En plakat bygget op om fyrmesteren og det lys, han bærer", "Key art poster: the lighthouse keeper, his pipe and the storm": "Key art-plakat: fyrmesteren, hans pibe og stormen", "From first sketches to the final front, side and back views": "Fra de første skitser til de endelige front-, side- og bagbilleder", "Character concept: early sketches, three outfit iterations and the chosen turnaround": "Karakterkoncept: tidlige skitser, tre udgaver af tøjet og den valgte turnaround", "Jørgen asleep in a rocking chair under a blanket, modelled as one piece to save rigging time": "Jørgen sovende i en gyngestol under et tæppe, modelleret i ét stykke for at spare rigging-tid", "Stylized, hand-textured props for the lighthouse interior": "Stiliserede, håndteksturerede rekvisitter til fyrtårnets indre", "Bookshelf, low shelf and shovel": "Reol, lav hylde og skovl", "Coastal rock with a mossy top": "Kystklippe med mos på toppen", "Storage bed with coal bucket and ladder": "Opbevaringsseng med kulspand og stige", "Bunk bed and coal stove with chimney pipes": "Køjeseng og kulovn med skorstensrør", "Modular wall panels, doors and wardrobe": "Modulære vægpaneler, døre og klædeskab", "Painted materials and the UV layouts behind them": "Malede materialer og UV-layoutet bag dem", "Stove, kettle and water pump with their texture sheets": "Ovn, kedel og vandpumpe med deres teksturark", "In Game": "I spillet", "The props in place, lit and interactive": "Rekvisitterne på plads, belyst og interaktive", "Watch the game video on YouTube": "Se spilvideoen på YouTube", "Watch the game video on YouTube ↗": "Se spilvideoen på YouTube ↗", "In game: repairing the water pump while windows and lights need attention": "I spillet: vandpumpen repareres, mens vinduer og lys kræver opmærksomhed", "Final render in Unreal Engine 5: the scholar's study at night": "Endelig render i Unreal Engine 5: den lærdes studerekammer om natten", "Engine": "Motor", "The scene is the secluded home of a scholar living in the forest. The scholar's love of nature is told through detailed textures throughout the room.": "Scenen er det afsides hjem for en lærd, der bor i skoven. Den lærdes kærlighed til naturen fortælles gennem detaljerede teksturer i hele rummet.", "Process": "Proces", "Wood grain and flooring materials were made in Substance Designer, along with a fireplace brick texture, a stone brick wall texture, and custom upholstery and fabric patterns for the sofa.": "Træårer og gulvmaterialer blev lavet i Substance Designer sammen med en mursten-tekstur til pejsen, en stenvæg-tekstur og specialdesignede polster- og stofmønstre til sofaen.", "Smaller props were textured in Substance Painter. Models were built in Maya and rendered in Unreal Engine, where books and flooring were placed with Blueprints.": "Mindre rekvisitter blev tekstureret i Substance Painter. Modellerne blev bygget i Maya og renderet i Unreal Engine, hvor bøger og gulv blev placeret med Blueprints.", "Fireplace corner and bookshelves under warm firelight": "Pejsehjørnet og reolerne i varmt ildskær", "Asset set: furniture, shelves, stone arch and brick wall": "Assetsæt: møbler, hylder, stenbue og murstensvæg", "Wood grain in Substance Designer: Tile Sampler base with Warp, Cloud Noise and Dirt detail": "Træårer i Substance Designer: Tile Sampler som base med Warp, Cloud Noise og Dirt-detaljer", "Second wood variant and a patterned fabric built from Shape and Transform 2D nodes": "En anden trævariant og et mønstret stof bygget af Shape- og Transform 2D-noder", "Red brick: Brick Generator and Flood Fill for variation, Cells noise for cracks": "Røde mursten: Brick Generator og Flood Fill til variation, Cells-støj til revner", "Stone brick from Tile Sampler and Distance; quilted sofa fabric": "Stensten fra Tile Sampler og Distance; quiltet sofastof", "Modeling in Maya, UV layout and material assignment": "Modellering i Maya, UV-layout og materialetildeling", "Assembly in Unreal: meshes, materials, Blueprint-placed books and lighting": "Samling i Unreal: meshes, materialer, bøger placeret med Blueprints og lys", "Key art: a glowing coral and mushroom forest under the sea": "Key art: en selvlysende koral- og svampeskov under havet", "An original fantasy realm deep in an ocean forest, home to invented creatures. The project is inspired by the creatures and landscapes of the Avatar films, aiming for a vibrant and mysterious world.": "Et originalt fantasyrige dybt i en havskov, hjem for opdigtede væsner. Projektet er inspireret af væsnerne og landskaberne i Avatar-filmene og sigter mod en levende og mystisk verden.", "All assets follow a PBR workflow. Models were built in Maya, with detail sculpted in ZBrush where needed. Details were baked in Marmoset Toolbag and materials were finished in Substance Painter.": "Alle assets følger et PBR-workflow. Modellerne blev bygget i Maya med detaljer skulptet i ZBrush efter behov. Detaljerne blev bagt i Marmoset Toolbag, og materialerne blev færdiggjort i Substance Painter.", "Watch on YouTube": "Se på YouTube", "Overview sheet: the world, its creatures and gameplay": "Oversigtsark: verdenen, dens væsner og gameplay", "Asset preparation: references and sculpts of coral, plants and creatures": "Forberedelse af assets: referencer og skulpturer af koraller, planter og væsner", "Pipeline from Maya modeling to Substance texturing to Unreal assembly": "Pipeline fra modellering i Maya over teksturering i Substance til samling i Unreal", "Sky atmosphere, fog, lighting and particle effects in Unreal": "Himmelatmosfære, tåge, lys og partikeleffekter i Unreal", "Title screen with the neon retro-desktop look": "Titelskærm med neon-retro-skrivebordslook", "Date": "Dato", "Watch the gameplay video for a look at the project.": "Se gameplayvideoen for at få et indtryk af projektet.", "Screenshots, UI elements and references": "Skærmbilleder, UI-elementer og referencer", "Wallpaper and in-game desktop design": "Baggrund og design af skrivebordet i spillet", "Level design and mechanics flow": "Leveldesign og mekanikflow", "2D illustration": "2D-illustration", "A winged dark rider charging through ice and flowers": "En vinget mørk rytter, der stormer frem gennem is og blomster", "A collection of original character illustrations.": "En samling originale karakterillustrationer.", "A figure in a cathedral of stained-glass light": "En skikkelse i en katedral af farvet glaslys", "Image viewer": "Billedfremviser", "Light mode": "Lyst tema", "Dark mode": "Mørkt tema", "Back to hand": "Tilbage til hånden", "Selected, press Ctrl+C": "Markeret, tryk Ctrl+C"}};
+const I18N_PAT = [
+  [/^All \((\d+)\)$/, {zh:m=>`全部 (${m[1]})`, da:m=>`Alle (${m[1]})`}],
+  [/^(\d+) projects$/, {zh:m=>`${m[1]} 个项目`, da:m=>`${m[1]} projekter`}],
+  [/^(\d+) cards$/, {zh:m=>`${m[1]} 张牌`, da:m=>`${m[1]} kort`}],
+  [/^Question (\d+) \/ (\d+)$/, {zh:m=>`第 ${m[1]} / ${m[2]} 题`, da:m=>`Spørgsmål ${m[1]} / ${m[2]}`}],
+  [/^Also strong in you: (.+) and (.+)\.$/, {zh:(m,D)=>`你身上同样鲜明的还有：${D[m[1]]||m[1]} 和 ${D[m[2]]||m[2]}。`, da:(m,D)=>`Også stærkt i dig: ${D[m[1]]||m[1]} og ${D[m[2]]||m[2]}.`}],
+];
+let LANG = "en";
+try{ const l = localStorage.getItem("ml-lang"); if(l === "zh" || l === "da") LANG = l; }catch(_){}
+const ORIG = new WeakMap();
+function trStr(k){
+  const D = I18N[LANG]; if(!D) return null;
+  if(D[k] != null) return D[k];
+  for(const [re, f] of I18N_PAT){ const m = k.match(re); if(m && f[LANG]) return f[LANG](m, D); }
+  const parts = k.split(/( · | — )/);
+  if(parts.length > 1){ let hit = false;
+    const out = parts.map(p => { const t = D[p] != null ? D[p] : null; if(t != null){ hit = true; return t; }
+      for(const [re, f] of I18N_PAT){ const m = p.match(re); if(m && f[LANG]){ hit = true; return f[LANG](m, D); } } return p; });
+    if(hit) return out.join(""); }
+  return null;
+}
+function trNode(n){
+  const p = n.parentElement; if(!p || p.closest("script,style,[contenteditable],.lang-seg")) return;
+  if(!ORIG.has(n)) ORIG.set(n, n.data);
+  const o = ORIG.get(n), k = o.trim();
+  let v = o;
+  if(LANG !== "en" && k){ const t = trStr(k); if(t != null) v = o.replace(k, t); }
+  if(n.data !== v){ n.data = v; ORIG.set(n, o); }
+}
+function trTree(root){
+  if(editing) return;
+  if(root.nodeType === 3) return trNode(root);
+  const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT); let n;
+  while((n = w.nextNode())) trNode(n);
+}
+const I18N_OBS = new MutationObserver(ms => { if(editing) return;
+  ms.forEach(m => m.type === "characterData" ? (ORIG.delete(m.target), trNode(m.target)) : m.addedNodes.forEach(trTree)); });
+function langSync(){
+  document.documentElement.lang = LANG === "zh" ? "zh-Hans" : LANG;
+  document.querySelectorAll(".lang-seg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === LANG));
+}
+function setLang(l){
+  LANG = l; try{ localStorage.setItem("ml-lang", l); }catch(_){}
+  I18N_OBS.disconnect(); trTree(document.body); langSync();
+  I18N_OBS.observe(document.body, {childList:true, subtree:true});
+}
+let THEME = "dark";
+try{ if(localStorage.getItem("ml-theme") === "light") THEME = "light"; }catch(_){}
+function themeSync(){
+  document.documentElement.dataset.theme = THEME;
+  document.querySelectorAll(".thm-btn").forEach(b => { b.setAttribute("aria-label", THEME === "dark" ? "Light mode" : "Dark mode"); b.title = b.getAttribute("aria-label"); });
+}
+document.addEventListener("click", e => {
+  const lb = e.target.closest(".lang-seg button");
+  if(lb){ setLang(lb.dataset.lang); return; }
+  if(e.target.closest(".thm-btn")){ THEME = THEME === "dark" ? "light" : "dark"; try{ localStorage.setItem("ml-theme", THEME); }catch(_){} themeSync(); }
+});
+new MutationObserver(() => { langSync(); themeSync(); }).observe(document.getElementById("app"), {childList:true});
+themeSync(); setLang(LANG);
+
+/* ---------- boot ---------- */
+lastWasDetail = S.projects.some(x=>x.id===location.hash.slice(1));
+render(true);
+(async ()=>{
+  if(!window.claude?.use) await new Promise(r=>addEventListener("load", r, {once:true}));
+  if(!window.claude?.use) return;
+  try{
+    const [art, assets] = await Promise.all([claude.use("artifact"), claude.use("assets")]);
+    ART = art; ASSETS = assets;   /* assets is only granted to editors, so it doubles as the edit-access signal */
+    updateBar();
+  }catch(_){}
+})();
+</script>
+</body></html>
